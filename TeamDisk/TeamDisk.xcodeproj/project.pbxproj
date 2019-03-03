@@ -43,7 +43,6 @@
 		AF7900CE165F58170035EBE4 /* LEODetailMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7900CD165F58170035EBE4 /* LEODetailMusicViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF7E97A2164BBB2800C865AC /* LEOUploadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E97A1164BBB2800C865AC /* LEOUploadInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF80C9A8166C575900E322C8 /* LEOResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF80C9A7166C575900E322C8 /* LEOResultView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AF853E4D16436B75004ED6C8 /* res in Resources */ = {isa = PBXBuildFile; fileRef = AF853E4C16436B75004ED6C8 /* res */; };
 		AF856AB7164A129000BFDDFF /* LEOUploadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856AB6164A129000BFDDFF /* LEOUploadListCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF856ABB164A31E700BFDDFF /* LEOUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ABA164A31E700BFDDFF /* LEOUploadView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF856ABE164A40A100BFDDFF /* LEOUploadToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ABD164A40A100BFDDFF /* LEOUploadToolBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -172,7 +171,6 @@
 		AF7E97A1164BBB2800C865AC /* LEOUploadInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOUploadInfo.m; path = classes/Model/LEOUploadInfo.m; sourceTree = "<group>"; };
 		AF80C9A6166C575900E322C8 /* LEOResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEOResultView.h; path = classes/View/LEOResultView.h; sourceTree = "<group>"; };
 		AF80C9A7166C575900E322C8 /* LEOResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOResultView.m; path = classes/View/LEOResultView.m; sourceTree = "<group>"; };
-		AF853E4C16436B75004ED6C8 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		AF856AB5164A129000BFDDFF /* LEOUploadListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEOUploadListCell.h; path = classes/View/LEOUploadListCell.h; sourceTree = "<group>"; };
 		AF856AB6164A129000BFDDFF /* LEOUploadListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOUploadListCell.m; path = classes/View/LEOUploadListCell.m; sourceTree = "<group>"; };
 		AF856AB9164A31E700BFDDFF /* LEOUploadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEOUploadView.h; path = classes/View/LEOUploadView.h; sourceTree = "<group>"; };
@@ -413,7 +411,6 @@
 				AF60A8DE172677A900A4DB96 /* LEOWebDAV */,
 				AFE3450316537B9B0026B089 /* KTPhotoBrowser */,
 				AF856AC7164A600E00BFDDFF /* ELCImagePicker */,
-				AF853E4C16436B75004ED6C8 /* res */,
 				AFABEA3116354DF400EDCCF3 /* Utilities */,
 				AFABEA3016354DE400EDCCF3 /* View */,
 				AFABEA2F16354DDA00EDCCF3 /* Model */,
@@ -628,7 +625,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFABEA121635498700EDCCF3 /* InfoPlist.strings in Resources */,
-				AF853E4D16436B75004ED6C8 /* res in Resources */,
 				608B868D222BB6A000EE5BBA /* tabbtn_home@2x.png in Resources */,
 				AF856ADC164A601000BFDDFF /* ELCAssetPicker.xib in Resources */,
 				AF856ADE164A601000BFDDFF /* ELCAssetTablePicker.xib in Resources */,
