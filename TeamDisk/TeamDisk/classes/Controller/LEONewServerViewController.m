@@ -86,7 +86,7 @@
     frame.size.width-=kNewServerMargin*2;
     frame.origin.x=kNewServerMargin;
     frame.size.height=4*kNewServerCellHeight+5*kNewServerMargin;
-    frame.origin.y=kNewServerMargin;
+    frame.origin.y=100+kNewServerMargin;
     UIView *background=[[UIView alloc] initWithFrame:frame];
     CALayer *bgLayer=[background layer];
     [bgLayer setMasksToBounds:YES];
@@ -96,26 +96,26 @@
     [self.view addSubview:background];
     [background release];
     
-    // 左侧的Label
-    _serverUrl = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, kNewServerMargin*2, kNewServerLabelWidth, kNewServerCellHeight)];
+    // 左侧的Label https://dav.jianguoyun.com/dav/
+    _serverUrl = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*2, kNewServerLabelWidth, kNewServerCellHeight)];
     _serverUrl.backgroundColor=[UIColor clearColor];
     _serverUrl.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _serverUrl.textAlignment=UITextAlignmentRight;
     _serverUrl.text=NSLocalizedString(@"Server URL",@"");
     [self.view addSubview:_serverUrl];
-    _userName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, kNewServerMargin*3+kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
+    _userName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*3+kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _userName.backgroundColor=[UIColor clearColor];
     _userName.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _userName.textAlignment=UITextAlignmentRight;
     _userName.text=NSLocalizedString(@"User Name",@"");
     [self.view addSubview:_userName];
-    _password = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, kNewServerMargin*4+2*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
+    _password = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*4+2*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _password.backgroundColor=[UIColor clearColor];
     _password.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _password.textAlignment=UITextAlignmentRight;
     _password.text=NSLocalizedString(@"Password",@"");
     [self.view addSubview:_password];
-    _desName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, kNewServerMargin*5+3*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
+    _desName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*5+3*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _desName.backgroundColor=[UIColor clearColor];
     _desName.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _desName.textAlignment=UITextAlignmentRight;
@@ -125,7 +125,7 @@
     // 右侧的TextField
     CGSize size=self.view.frame.size;
     CGFloat textWidth=size.width-kNewServerLabelWidth-5*kNewServerMargin;
-    _serverUrlText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, kNewServerMargin*2, textWidth, kNewServerCellHeight)];
+    _serverUrlText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*2, textWidth, kNewServerCellHeight)];
     _serverUrlText.borderStyle=UITextBorderStyleRoundedRect;
     _serverUrlText.textAlignment=UITextAlignmentLeft;
     _serverUrlText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
@@ -139,7 +139,7 @@
     _serverUrlText.delegate=self;
     [self.view addSubview:_serverUrlText];
     
-    _userNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, kNewServerMargin*3+kNewServerCellHeight, textWidth, kNewServerCellHeight)];
+    _userNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*3+kNewServerCellHeight, textWidth, kNewServerCellHeight)];
     _userNameText.borderStyle=UITextBorderStyleRoundedRect;
     _userNameText.textAlignment=UITextAlignmentLeft;
     _userNameText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
@@ -153,7 +153,7 @@
     _userNameText.delegate=self;
     [self.view addSubview:_userNameText];
     
-    _passwordText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, kNewServerMargin*4+kNewServerCellHeight*2, textWidth, kNewServerCellHeight)];
+    _passwordText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*4+kNewServerCellHeight*2, textWidth, kNewServerCellHeight)];
     _passwordText.borderStyle=UITextBorderStyleRoundedRect;
     _passwordText.textAlignment=UITextAlignmentLeft;
     _passwordText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
@@ -167,8 +167,7 @@
     _passwordText.tag=kTagPassword;
     _passwordText.delegate=self;
     [self.view addSubview:_passwordText];
-    
-    _desNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, kNewServerMargin*5+kNewServerCellHeight*3, textWidth, kNewServerCellHeight)];
+    _desNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*5+kNewServerCellHeight*3, textWidth, kNewServerCellHeight)];
     _desNameText.borderStyle=UITextBorderStyleRoundedRect;
     _desNameText.textAlignment=UITextAlignmentLeft;
     _desNameText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
@@ -180,17 +179,17 @@
     _desNameText.tag=kTagDescription;
     _desNameText.delegate=self;
     [self.view addSubview:_desNameText];
-    
+    _desNameText.text = @"JianGuoYun";
     if(_serverInfo){
         _serverUrlText.text=_serverInfo.url;
         _userNameText.text=_serverInfo.userName;
         _passwordText.text=_serverInfo.password? _serverInfo.password:@"";
         _desNameText.text=_serverInfo.description?_serverInfo.description:@"";
     }else{
-        _serverUrlText.text=@"";
-        _userNameText.text=@"";
-        _passwordText.text=@"";
-        _desNameText.text=@"";
+//        _serverUrlText.text=@"";
+//        _userNameText.text=@"";
+//        _passwordText.text=@"";
+//        _desNameText.text=@"";
     }
     [_serverUrlText becomeFirstResponder];
 }

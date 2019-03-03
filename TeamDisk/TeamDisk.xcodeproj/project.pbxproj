@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		608B85F9222AE00F00EE5BBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */; };
+		632B89CCA81FEAB7F77E6726 /* libPods-TeamDisk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */; };
 		AF1254EF168062880014D1F9 /* LEOAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254EE168062880014D1F9 /* LEOAlbumPickerController.m */; };
 		AF1254F316806D180014D1F9 /* LEOAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254F216806D180014D1F9 /* LEOAssetTablePicker.m */; };
 		AF33D80E166861E300BCFAE2 /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33D80D166861E300BCFAE2 /* AudioButton.m */; };
@@ -100,6 +102,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamDisk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EAA57CC12EEB9FF3AD403E4 /* Pods-TeamDisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDisk/Pods-TeamDisk.release.xcconfig"; sourceTree = "<group>"; };
 		AF1254ED168062880014D1F9 /* LEOAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAlbumPickerController.h; sourceTree = "<group>"; };
 		AF1254EE168062880014D1F9 /* LEOAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOAlbumPickerController.m; sourceTree = "<group>"; };
 		AF1254F116806D180014D1F9 /* LEOAssetTablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAssetTablePicker.h; sourceTree = "<group>"; };
@@ -265,6 +270,7 @@
 		AFFA98A31675AE1200D9AC5B /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHFKeychainUtils.h; path = classes/Utilities/SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		AFFA98A41675AE1200D9AC5B /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFHFKeychainUtils.m; path = classes/Utilities/SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		AFFA98A71675B36400D9AC5B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B37672534032CDFCC1992C3C /* Pods-TeamDisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDisk/Pods-TeamDisk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,12 +287,22 @@
 				AFABEA081635498700EDCCF3 /* UIKit.framework in Frameworks */,
 				AFABEA0A1635498700EDCCF3 /* Foundation.framework in Frameworks */,
 				AFABEA0C1635498700EDCCF3 /* CoreGraphics.framework in Frameworks */,
+				632B89CCA81FEAB7F77E6726 /* libPods-TeamDisk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C74ED3E1A5BCA8325E1FADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B37672534032CDFCC1992C3C /* Pods-TeamDisk.debug.xcconfig */,
+				8EAA57CC12EEB9FF3AD403E4 /* Pods-TeamDisk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF60A8DE172677A900A4DB96 /* LEOWebDAV */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,9 +373,11 @@
 				AFE9BC33166F2E720098A306 /* Default.png */,
 				AFE9BC31166F2E680098A306 /* icon@2x.png */,
 				AFE9BC2F166F2E630098A306 /* icon.png */,
+				608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */,
 				AFABEA0D1635498700EDCCF3 /* TeamDisk */,
 				AFABEA061635498700EDCCF3 /* Frameworks */,
 				AFABEA041635498700EDCCF3 /* Products */,
+				2C74ED3E1A5BCA8325E1FADA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,6 +401,7 @@
 				AFABEA071635498700EDCCF3 /* UIKit.framework */,
 				AFABEA091635498700EDCCF3 /* Foundation.framework */,
 				AFABEA0B1635498700EDCCF3 /* CoreGraphics.framework */,
+				74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -554,6 +573,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFABEA211635498800EDCCF3 /* Build configuration list for PBXNativeTarget "TeamDisk" */;
 			buildPhases = (
+				1D17214E6B13AA05A5FB20C6 /* [CP] Check Pods Manifest.lock */,
 				AFABE9FF1635498700EDCCF3 /* Sources */,
 				AFABEA001635498700EDCCF3 /* Frameworks */,
 				AFABEA011635498700EDCCF3 /* Resources */,
@@ -576,6 +596,12 @@
 				CLASSPREFIX = LEO;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = SAE;
+				TargetAttributes = {
+					AFABEA021635498700EDCCF3 = {
+						DevelopmentTeam = RCWE4X8J89;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = AFABE9FD1635498700EDCCF3 /* Build configuration list for PBXProject "TeamDisk" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -606,6 +632,7 @@
 				AF856ADE164A601000BFDDFF /* ELCAssetTablePicker.xib in Resources */,
 				AF856AE0164A601000BFDDFF /* ELCImagePickerController.xib in Resources */,
 				AF856AE1164A601000BFDDFF /* Overlay.png in Resources */,
+				608B85F9222AE00F00EE5BBA /* Launch Screen.storyboard in Resources */,
 				AF856AE2164A601000BFDDFF /* Overlay@2x.png in Resources */,
 				AFA0B79F165B557800889383 /* Localizable.strings in Resources */,
 				AFE9BC30166F2E630098A306 /* icon.png in Resources */,
@@ -617,6 +644,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D17214E6B13AA05A5FB20C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeamDisk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFABE9FF1635498700EDCCF3 /* Sources */ = {
@@ -739,7 +791,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -759,7 +811,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -769,28 +821,39 @@
 		};
 		AFABEA221635498800EDCCF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B37672534032CDFCC1992C3C /* Pods-TeamDisk.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RCWE4X8J89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeamDisk/TeamDisk-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TeamDisk/TeamDisk-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.showu.teamdisk;
 				PRODUCT_NAME = TeamDisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		AFABEA231635498800EDCCF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EAA57CC12EEB9FF3AD403E4 /* Pods-TeamDisk.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RCWE4X8J89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeamDisk/TeamDisk-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TeamDisk/TeamDisk-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.showu.teamdisk;
 				PRODUCT_NAME = TeamDisk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

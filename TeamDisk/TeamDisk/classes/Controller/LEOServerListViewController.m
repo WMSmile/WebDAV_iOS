@@ -18,7 +18,7 @@
 #import "LEODoubleModeViewController.h"
 
 #import "SFHFKeychainUtils.h"
-
+#import <Masonry.h>
 @interface LEOServerListViewController ()
 {
     UIButton *editButtonView;
@@ -69,16 +69,18 @@
     _serverListView.dataSource=self;
 //    _serverListView.bounces=NO;
     _serverListView.allowsSelectionDuringEditing=YES;
-    _serverListView.backgroundColor=[UIColor colorWithRed:kBackgroundColorR green:kBackgroundColorG blue:kBackgroundColorB alpha:kBackgroundColorA];
+    _serverListView.backgroundColor=[UIColor lightGrayColor];
     [self.view addSubview:_serverListView];
-    
+    [_serverListView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     footer=[[UIView alloc]initWithFrame:CGRectZero];
     frame.size.height=kServerListCellHeight;
     labelFooter=[[UILabel alloc] initWithFrame:frame];
     labelFooter.textAlignment=UITextAlignmentCenter;
     labelFooter.text=NSLocalizedString(@"Press 'Edit' to Add New Server", @"");
     labelFooter.textColor=[UIColor grayColor];
-    labelFooter.backgroundColor=[UIColor clearColor];
+    labelFooter.backgroundColor=[UIColor lightGrayColor];
 
     NSArray *items=[NSArray arrayWithObjects:NSLocalizedString(@"Add",@""), nil];
     _editToolBar=[[LEOEditToolBar alloc] initWithItems:items];
