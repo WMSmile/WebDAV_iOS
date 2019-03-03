@@ -137,7 +137,7 @@
     [self.view addSubview:_hub];
     _hub.delegate=self;
     _hub.labelText=text;
-    _hub.customView=[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"/res/Checkmark.png"]] autorelease];
+    _hub.customView=[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]] autorelease];
     _hub.mode=done?MBProgressHUDModeCustomView:MBProgressHUDModeIndeterminate;
     _hub.removeFromSuperViewOnHide=YES;
     [_hub show:NO];

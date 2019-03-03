@@ -86,13 +86,13 @@
 {
     switch (status) {
         case LEOUploadStatusDone:
-            [_statusView setImage:[UIImage imageNamed:@"/res/upload_success.png"]];
+            [_statusView setImage:[UIImage imageNamed:@"upload_success.png"]];
             _statusView.hidden=NO;
             _detailLabel.hidden=NO;
             _progressView.hidden=YES;
             break;
         case LEOUploadStatusError:
-            [_statusView setImage:[UIImage imageNamed:@"/res/upload_failure.png"]];
+            [_statusView setImage:[UIImage imageNamed:@"upload_failure.png"]];
             _statusView.hidden=NO;
             _detailLabel.hidden=YES;
             _progressView.hidden=YES;
@@ -104,7 +104,7 @@
             break;
         case LEOUploadStatusWait:
         default:
-            [_statusView setImage:[UIImage imageNamed:@"/res/upload_wait.png"]];
+            [_statusView setImage:[UIImage imageNamed:@"upload_wait.png"]];
             _statusView.hidden=NO;
             _detailLabel.hidden=YES;
             _progressView.hidden=YES;

@@ -22,13 +22,16 @@
 {
     self=[super init];
     if (self) {
-        NSString *filePath=[[[NSBundle mainBundle] bundlePath] stringByAppendingFormat:@"%@",kContentTypesPlistFileName];
+        NSString *filePath=[[[NSBundle mainBundle] bundlePath] stringByAppendingFormat:@"/%@",kContentTypesPlistFileName];
         NSDictionary *_table=[NSDictionary dictionaryWithContentsOfFile:filePath];
 //        _fileDic=[_table objectForKey:@"file"];
-        _fileDic=[[NSMutableDictionary alloc] initWithDictionary:[_table objectForKey:@"file"]];
-        _folderDic=[[NSMutableDictionary alloc] initWithDictionary:[_table objectForKey:@"folder"]];
-        _fileDefault=[[NSString alloc] initWithString:[_fileDic valueForKey:@"default"]];
-        _folderDefault=[[NSString alloc] initWithString:[_folderDic valueForKey:@"default"]];
+        if (_table.allKeys.count>0) {
+            _fileDic=[[NSMutableDictionary alloc] initWithDictionary:[_table objectForKey:@"file"]];
+            _folderDic=[[NSMutableDictionary alloc] initWithDictionary:[_table objectForKey:@"folder"]];
+            _fileDefault=[[NSString alloc] initWithString:[_fileDic valueForKey:@"default"]];
+            _folderDefault=[[NSString alloc] initWithString:[_folderDic valueForKey:@"default"]];
+            
+        }
     }
     return self;
 }

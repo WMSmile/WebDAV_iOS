@@ -12,8 +12,8 @@
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
 
-NSString *playImage = @"/res/music_play.png";
-NSString *stopImage = @"/res/music_stop.png";
+NSString *playImage = @"music_play.png";
+NSString *stopImage = @"music_stop.png";
 @interface AudioButton ()<CAAnimationDelegate>
 
 @end
@@ -269,7 +269,7 @@ NSString *stopImage = @"/res/music_stop.png";
 {
     if (!loadingView) {
         loadingView = [[UIImageView alloc] initWithFrame:CGRectMake(3, 3, self.frame.size.width-6, self.frame.size.height-6)];
-        loadingView.image = [UIImage imageNamed:@"/res/music_loading"];
+        loadingView.image = [UIImage imageNamed:@"music_loading"];
         [self addSubview:loadingView];
     }
     

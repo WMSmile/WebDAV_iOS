@@ -112,7 +112,7 @@
 
 -(void)setIconType:(NSString *)picName
 {
-    [_iconImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"res/%@",picName]]];
+    [_iconImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",picName]]];
 }
 
 -(void)setThumbnail:(NSString *)cacheName

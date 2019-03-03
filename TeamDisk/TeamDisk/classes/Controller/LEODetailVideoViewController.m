@@ -26,7 +26,7 @@
     [super prepareDetail];
     
 	imageView=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 95, 95)];
-    [imageView setImage:[UIImage imageNamed:@"/res/music_play.png"] forState:UIControlStateNormal];
+    [imageView setImage:[UIImage imageNamed:@"music_play.png"] forState:UIControlStateNormal];
     [_displayView addSubview:imageView];
     [imageView addTarget:self action:@selector(startPlay) forControlEvents:UIControlEventTouchUpInside];
     imageView.center=_displayView.center;

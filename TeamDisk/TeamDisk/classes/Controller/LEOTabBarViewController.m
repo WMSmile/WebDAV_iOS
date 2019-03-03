@@ -46,7 +46,7 @@
         _viewControllers=[[NSMutableArray alloc] initWithArray:controllers];
         _tabBar=[[LEOTabBar alloc] initWithItems:items];
         _tabBar.delegate=self;
-        
+        _tabBar.backgroundColor = [UIColor colorWithRed:0.43 green:0.99 blue:0.50 alpha:1.00];
         [self.view addSubview:_tabBar];
         [self.view setBackgroundColor:[UIColor darkGrayColor]];
         

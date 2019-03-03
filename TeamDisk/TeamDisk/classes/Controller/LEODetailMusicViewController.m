@@ -34,7 +34,7 @@
     [super prepareDetail];
     
 //	imageView=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
-//    [imageView setImage:[UIImage imageNamed:@"/res/detail_playBtn.png"] forState:UIControlStateNormal];
+//    [imageView setImage:[UIImage imageNamed:@"detail_playBtn.png"] forState:UIControlStateNormal];
 //    [_displayView addSubview:imageView];
 //    [imageView addTarget:self action:@selector(startPlay) forControlEvents:UIControlEventTouchUpInside];
 //    imageView.center=_displayView.center;
@@ -255,7 +255,7 @@
     [self.view addSubview:_hub];
     _hub.delegate=self;
     _hub.labelText=text;
-    _hub.customView=[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"/res/Checkmark.png"]] autorelease];
+    _hub.customView=[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]] autorelease];
     _hub.mode=done?MBProgressHUDModeCustomView:MBProgressHUDModeIndeterminate;
     _hub.removeFromSuperViewOnHide=YES;
     [_hub show:YES];

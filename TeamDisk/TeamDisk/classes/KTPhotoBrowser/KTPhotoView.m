@@ -57,7 +57,7 @@
 
 -(void)setDefaultImage
 {
-    [imageView_ setImage:[UIImage imageNamed:@"res/folder_picture.png"]];
+    [imageView_ setImage:[UIImage imageNamed:@"folder_picture.png"]];
     [imageView_ setContentMode:UIViewContentModeCenter];
 }
 
