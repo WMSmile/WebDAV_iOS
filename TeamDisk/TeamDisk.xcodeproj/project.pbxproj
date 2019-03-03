@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		608B85F9222AE00F00EE5BBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */; };
+		608B868D222BB6A000EE5BBA /* tabbtn_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 608B868C222BB6A000EE5BBA /* tabbtn_home@2x.png */; };
+		608B868F222BB72C00EE5BBA /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608B868E222BB72C00EE5BBA /* Image.xcassets */; };
 		632B89CCA81FEAB7F77E6726 /* libPods-TeamDisk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */; };
 		AF1254EF168062880014D1F9 /* LEOAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254EE168062880014D1F9 /* LEOAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF1254F316806D180014D1F9 /* LEOAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254F216806D180014D1F9 /* LEOAssetTablePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -68,7 +70,7 @@
 		AFABEA0C1635498700EDCCF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFABEA0B1635498700EDCCF3 /* CoreGraphics.framework */; };
 		AFABEA121635498700EDCCF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFABEA101635498700EDCCF3 /* InfoPlist.strings */; };
 		AFABEA141635498700EDCCF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABEA131635498700EDCCF3 /* main.m */; };
-		AFABEA181635498700EDCCF3 /* LEOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABEA171635498700EDCCF3 /* LEOAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFABEA181635498700EDCCF3 /* LEOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABEA171635498700EDCCF3 /* LEOAppDelegate.m */; };
 		AFCCFC791650A72500B68939 /* LEOListExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCCFC781650A72500B68939 /* LEOListExtendView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFCCFC991651090100B68939 /* LEORenameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCCFC981651090000B68939 /* LEORenameViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFCD00B016709A4F00750BFB /* LEOCameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCD00AF16709A4F00750BFB /* LEOCameraPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -102,6 +104,8 @@
 
 /* Begin PBXFileReference section */
 		608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		608B868C222BB6A000EE5BBA /* tabbtn_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbtn_home@2x.png"; sourceTree = "<group>"; };
+		608B868E222BB72C00EE5BBA /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamDisk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAA57CC12EEB9FF3AD403E4 /* Pods-TeamDisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDisk/Pods-TeamDisk.release.xcconfig"; sourceTree = "<group>"; };
 		AF1254ED168062880014D1F9 /* LEOAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAlbumPickerController.h; sourceTree = "<group>"; };
@@ -416,6 +420,7 @@
 				AFABEA2E16354DCA00EDCCF3 /* Controller */,
 				AFABEA161635498700EDCCF3 /* LEOAppDelegate.h */,
 				AFABEA171635498700EDCCF3 /* LEOAppDelegate.m */,
+				608B868E222BB72C00EE5BBA /* Image.xcassets */,
 				AFABEA0E1635498700EDCCF3 /* Supporting Files */,
 			);
 			path = TeamDisk;
@@ -496,6 +501,7 @@
 			children = (
 				AF33D80C166861E300BCFAE2 /* AudioButton.h */,
 				AF33D80D166861E300BCFAE2 /* AudioButton.m */,
+				608B868C222BB6A000EE5BBA /* tabbtn_home@2x.png */,
 				AFEAD4F91636AA3200DB48A1 /* LEOTabBar.h */,
 				AFEAD4FA1636AA3200DB48A1 /* LEOTabBar.m */,
 				AF7244DF16390C930020086C /* LEOServerListCell.h */,
@@ -623,6 +629,7 @@
 			files = (
 				AFABEA121635498700EDCCF3 /* InfoPlist.strings in Resources */,
 				AF853E4D16436B75004ED6C8 /* res in Resources */,
+				608B868D222BB6A000EE5BBA /* tabbtn_home@2x.png in Resources */,
 				AF856ADC164A601000BFDDFF /* ELCAssetPicker.xib in Resources */,
 				AF856ADE164A601000BFDDFF /* ELCAssetTablePicker.xib in Resources */,
 				AF856AE0164A601000BFDDFF /* ELCImagePickerController.xib in Resources */,
@@ -633,6 +640,7 @@
 				AFE9BC30166F2E630098A306 /* icon.png in Resources */,
 				AFE9BC32166F2E680098A306 /* icon@2x.png in Resources */,
 				AFE9BC34166F2E720098A306 /* Default.png in Resources */,
+				608B868F222BB72C00EE5BBA /* Image.xcassets in Resources */,
 				AFE9BC36166F2E830098A306 /* Default@2x.png in Resources */,
 				AFE9BC38166F2EA20098A306 /* Default-568h@2x.png in Resources */,
 			);

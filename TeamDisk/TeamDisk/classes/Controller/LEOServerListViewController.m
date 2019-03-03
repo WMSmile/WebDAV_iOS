@@ -55,6 +55,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     UIImage *stretchImage=[UIImage imageNamed:kNavigationBg];
     stretchImage=[stretchImage stretchableImageWithLeftCapWidth:1 topCapHeight:0];
 	[self.navigationController.navigationBar setBackgroundImage:stretchImage forBarMetrics:UIBarMetricsDefault];

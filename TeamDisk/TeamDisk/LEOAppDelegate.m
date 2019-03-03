@@ -27,18 +27,11 @@
 @synthesize networkController;
 @synthesize currentServer=_currentServer;
 
-- (void)dealloc
-{
-    [client release];
-    [networkController release];
-    [_window release];
-    [_rootTabBarController release];
-    [super dealloc];
-}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
 //    CGRect frame=self.window.frame;
 //    NSLog(@"window:%f,%f,%f,%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
@@ -49,8 +42,6 @@
     _settingsVC=[[LEOSettingsViewController alloc]init];
     _navSettingsVC=[[UINavigationController alloc]initWithRootViewController:_settingsVC];
     NSArray *rootTabBarVCArray=[NSArray arrayWithObjects:navServerListVC,_navSettingsVC,nil];
-    [serverListVC release];
-    [navServerListVC release];
     
     NSArray *rootTabBarItemArray=[NSArray arrayWithObjects:kTabbarHome,kTabbarHomeSel,kTabbarSettings,kTabbarSettingsSel,nil];
     _rootTabBarController=[[LEOTabBarViewController alloc] initWithViewControllers:rootTabBarVCArray andItems:rootTabBarItemArray];
@@ -66,7 +57,6 @@
 {
     if (client!=nil) {
         [client cancelRequest];
-        [client release];
         client=nil;
     }
     client = [[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
@@ -78,7 +68,6 @@
 -(void)setupCurrentServer:(LEOServerInfo *)info
 {
     if (_currentServer!=nil) {
-        [_currentServer release];
         _currentServer=nil;
     }
     _currentServer=[[LEOServerInfo alloc] initWithInfo:info];
@@ -89,18 +78,13 @@
 -(void)clearCurrentServer
 {
     self.window.rootViewController=_rootTabBarController;
-    [_contentListVC release];
     [_uploadVC clearUploadController];
-    [_uploadVC release];
     [_musicVC clearMusicController];
-    [_musicVC release];
-    [_serverTabBarController release];
 }
 
 -(LEONetworkController *)setupNetwork:(LEOServerInfo *)info
 {
     if (networkController!=nil) {
-        [networkController release];
         networkController=nil;
     }
     networkController=[[LEONetworkController alloc] initWithServerInfo:info];
@@ -116,9 +100,6 @@
     _musicVC=[[LEOMusicViewController alloc] init];
     UINavigationController *navMusicVC=[[UINavigationController alloc] initWithRootViewController:_musicVC];
     NSArray *serverTabBarVCArray=[NSArray arrayWithObjects:navContentListVC, navUploadVC, navMusicVC,_navSettingsVC, nil];
-    [navContentListVC release];
-    [navUploadVC release];
-    [navMusicVC release];
     
     NSArray *serverTabBarItemArray=[NSArray arrayWithObjects:kTabbarList,kTabbarListSel,kTabbarUpload,kTabbarUploadSel,kTabbarMusic,kTabbarMusicSel,kTabbarSettings,kTabbarSettingsSel,nil];
     _serverTabBarController=[[LEOTabBarViewController alloc] initWithViewControllers:serverTabBarVCArray andItems:serverTabBarItemArray];
