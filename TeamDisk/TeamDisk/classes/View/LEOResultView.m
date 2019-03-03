@@ -25,7 +25,7 @@
         rect.size.height=kLEOResultViewLabelHeight*3;
         _reasonLabel=[[UILabel alloc] initWithFrame:rect];
         _reasonLabel.numberOfLines=0;
-        _reasonLabel.textAlignment=UITextAlignmentCenter;
+        _reasonLabel.textAlignment=NSTextAlignmentCenter;
         [_reasonLabel setBackgroundColor:[UIColor clearColor]];
         _reasonLabel.font=[UIFont systemFontOfSize:kLEOResultViewLabelFontSz];
         [self addSubview:_reasonLabel];

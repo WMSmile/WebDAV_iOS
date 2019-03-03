@@ -53,7 +53,7 @@
 
 -(void)configAppMusic
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication]delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication]delegate];
     if (delegate.musicVC!=nil && [delegate.musicVC isPlaying]) {
         [delegate.musicVC pauseCurrentMusic];
     }

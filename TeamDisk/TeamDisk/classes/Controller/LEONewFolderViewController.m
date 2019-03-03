@@ -72,7 +72,7 @@
     _newNameTextField=[[UITextField alloc] initWithFrame:frame];
     [_newNameTextField setDelegate:self];
     _newNameTextField.borderStyle=UITextBorderStyleRoundedRect;
-    _newNameTextField.textAlignment=UITextAlignmentLeft;
+    _newNameTextField.textAlignment=NSTextAlignmentLeft;
     _newNameTextField.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     _newNameTextField.font=[UIFont systemFontOfSize:kUploadNewFolderFontSz];
     _newNameTextField.placeholder=NSLocalizedString(@"Please Input New Folder Name",@"");
@@ -181,7 +181,7 @@
 -(void)cancelChoose
 {
     [self beforeBack];
-    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -210,7 +210,7 @@
 #pragma mark - Request Methods
 -(void)setupClient
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOServerInfo *info=delegate.currentServer;
     _currentClient=[[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
                                                 andUserName:info.userName

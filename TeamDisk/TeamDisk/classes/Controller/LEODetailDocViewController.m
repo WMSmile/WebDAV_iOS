@@ -69,7 +69,7 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    NSLog(@"fail to load:%d，%@",[error code],error);
+    NSLog(@"fail to load:%ld，%@",(long)[error code],error);
     if ([error.domain isEqualToString:@"WebKitErrorDomain"]) {
         // webkit 解析域
         if (error.code==102) {

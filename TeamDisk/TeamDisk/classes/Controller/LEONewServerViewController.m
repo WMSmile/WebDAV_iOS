@@ -100,25 +100,25 @@
     _serverUrl = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*2, kNewServerLabelWidth, kNewServerCellHeight)];
     _serverUrl.backgroundColor=[UIColor clearColor];
     _serverUrl.font=[UIFont systemFontOfSize:kNewServerFontSz];
-    _serverUrl.textAlignment=UITextAlignmentRight;
+    _serverUrl.textAlignment=NSTextAlignmentRight;
     _serverUrl.text=NSLocalizedString(@"Server URL",@"");
     [self.view addSubview:_serverUrl];
     _userName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*3+kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _userName.backgroundColor=[UIColor clearColor];
     _userName.font=[UIFont systemFontOfSize:kNewServerFontSz];
-    _userName.textAlignment=UITextAlignmentRight;
+    _userName.textAlignment=NSTextAlignmentRight;
     _userName.text=NSLocalizedString(@"User Name",@"");
     [self.view addSubview:_userName];
     _password = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*4+2*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _password.backgroundColor=[UIColor clearColor];
     _password.font=[UIFont systemFontOfSize:kNewServerFontSz];
-    _password.textAlignment=UITextAlignmentRight;
+    _password.textAlignment=NSTextAlignmentRight;
     _password.text=NSLocalizedString(@"Password",@"");
     [self.view addSubview:_password];
     _desName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*5+3*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _desName.backgroundColor=[UIColor clearColor];
     _desName.font=[UIFont systemFontOfSize:kNewServerFontSz];
-    _desName.textAlignment=UITextAlignmentRight;
+    _desName.textAlignment=NSTextAlignmentRight;
     _desName.text=NSLocalizedString(@"Description",@"");
     [self.view addSubview:_desName];
     
@@ -127,7 +127,8 @@
     CGFloat textWidth=size.width-kNewServerLabelWidth-5*kNewServerMargin;
     _serverUrlText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*2, textWidth, kNewServerCellHeight)];
     _serverUrlText.borderStyle=UITextBorderStyleRoundedRect;
-    _serverUrlText.textAlignment=UITextAlignmentLeft;
+    _serverUrlText.textAlignment=NSTextAlignmentLeft;
+    _serverUrlText.text = @"http://dav.jianguoyun.com/dav";
     _serverUrlText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     _serverUrlText.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _serverUrlText.keyboardType=UIKeyboardTypeURL;
@@ -141,7 +142,7 @@
     
     _userNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*3+kNewServerCellHeight, textWidth, kNewServerCellHeight)];
     _userNameText.borderStyle=UITextBorderStyleRoundedRect;
-    _userNameText.textAlignment=UITextAlignmentLeft;
+    _userNameText.textAlignment=NSTextAlignmentLeft;
     _userNameText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     _userNameText.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _userNameText.keyboardType=UIKeyboardTypeDefault;
@@ -155,7 +156,7 @@
     
     _passwordText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*4+kNewServerCellHeight*2, textWidth, kNewServerCellHeight)];
     _passwordText.borderStyle=UITextBorderStyleRoundedRect;
-    _passwordText.textAlignment=UITextAlignmentLeft;
+    _passwordText.textAlignment=NSTextAlignmentLeft;
     _passwordText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     _passwordText.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _passwordText.keyboardType=UIKeyboardTypeAlphabet;
@@ -169,7 +170,7 @@
     [self.view addSubview:_passwordText];
     _desNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*5+kNewServerCellHeight*3, textWidth, kNewServerCellHeight)];
     _desNameText.borderStyle=UITextBorderStyleRoundedRect;
-    _desNameText.textAlignment=UITextAlignmentLeft;
+    _desNameText.textAlignment=NSTextAlignmentLeft;
     _desNameText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     _desNameText.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _desNameText.keyboardType=UIKeyboardTypeDefault;

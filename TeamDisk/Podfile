@@ -1,5 +1,7 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '8.0'
+#禁止所有来自CocoaPods的警告
+inhibit_all_warnings!
 
 target 'TeamDisk' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -7,5 +9,5 @@ target 'TeamDisk' do
 
   # Pods for TeamDisk
     pod 'Masonry', :git => 'https://github.com/SnapKit/Masonry.git'
-
+    pod 'MBProgressHUD','0.5'
 end

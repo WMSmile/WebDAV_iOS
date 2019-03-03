@@ -9,95 +9,94 @@
 /* Begin PBXBuildFile section */
 		608B85F9222AE00F00EE5BBA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */; };
 		632B89CCA81FEAB7F77E6726 /* libPods-TeamDisk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */; };
-		AF1254EF168062880014D1F9 /* LEOAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254EE168062880014D1F9 /* LEOAlbumPickerController.m */; };
-		AF1254F316806D180014D1F9 /* LEOAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254F216806D180014D1F9 /* LEOAssetTablePicker.m */; };
-		AF33D80E166861E300BCFAE2 /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33D80D166861E300BCFAE2 /* AudioButton.m */; };
-		AF4F51361647C529005B81A6 /* LEODetailDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4F51351647C529005B81A6 /* LEODetailDocViewController.m */; };
+		AF1254EF168062880014D1F9 /* LEOAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254EE168062880014D1F9 /* LEOAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF1254F316806D180014D1F9 /* LEOAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254F216806D180014D1F9 /* LEOAssetTablePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF33D80E166861E300BCFAE2 /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33D80D166861E300BCFAE2 /* AudioButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF4F51361647C529005B81A6 /* LEODetailDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4F51351647C529005B81A6 /* LEODetailDocViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF4F51391647D0C0005B81A6 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4F51381647D0C0005B81A6 /* QuickLook.framework */; };
 		AF5A9581164918FA0065CF85 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5A9580164918FA0065CF85 /* AVFoundation.framework */; };
-		AF5A958516491D050065CF85 /* LEOMusicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A958416491D050065CF85 /* LEOMusicItem.m */; };
-		AF60A8FC172677A900A4DB96 /* LEOWebDAVBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E0172677A900A4DB96 /* LEOWebDAVBaseRequest.m */; };
-		AF60A8FD172677A900A4DB96 /* LEOWebDAVClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E2172677A900A4DB96 /* LEOWebDAVClient.m */; };
-		AF60A8FE172677A900A4DB96 /* LEOWebDAVCopyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E4172677A900A4DB96 /* LEOWebDAVCopyRequest.m */; };
-		AF60A8FF172677A900A4DB96 /* LEOWebDAVDeleteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E7172677A900A4DB96 /* LEOWebDAVDeleteRequest.m */; };
-		AF60A900172677A900A4DB96 /* LEOWebDAVDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E9172677A900A4DB96 /* LEOWebDAVDownloadRequest.m */; };
-		AF60A901172677A900A4DB96 /* LEOWebDAVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8EB172677A900A4DB96 /* LEOWebDAVItem.m */; };
-		AF60A902172677A900A4DB96 /* LEOWebDAVMakeCollectionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8ED172677A900A4DB96 /* LEOWebDAVMakeCollectionRequest.m */; };
-		AF60A903172677A900A4DB96 /* LEOWebDAVMoveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8EF172677A900A4DB96 /* LEOWebDAVMoveRequest.m */; };
-		AF60A904172677A900A4DB96 /* LEOWebDAVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F1172677A900A4DB96 /* LEOWebDAVParser.m */; };
-		AF60A905172677A900A4DB96 /* LEOWebDAVPropertyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F3172677A900A4DB96 /* LEOWebDAVPropertyRequest.m */; };
-		AF60A906172677A900A4DB96 /* LEOWebDAVRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F5172677A900A4DB96 /* LEOWebDAVRequest.m */; };
-		AF60A907172677A900A4DB96 /* LEOWebDAVUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F7172677A900A4DB96 /* LEOWebDAVUploadRequest.m */; };
-		AF60A908172677A900A4DB96 /* LEOWebDAVURL.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F9172677A900A4DB96 /* LEOWebDAVURL.m */; };
-		AF60A909172677A900A4DB96 /* LEOWebDAVUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8FB172677A900A4DB96 /* LEOWebDAVUtility.m */; };
-		AF7244E116390C930020086C /* LEOServerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244E016390C930020086C /* LEOServerListCell.m */; };
-		AF7244E9163922BF0020086C /* LEOServerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244E8163922BF0020086C /* LEOServerInfo.m */; };
-		AF7244EC16392F970020086C /* LEOUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244EB16392F970020086C /* LEOUtility.m */; };
-		AF7244F6163947D20020086C /* LEOUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244F5163947D20020086C /* LEOUploadViewController.m */; };
-		AF7244F916394CB30020086C /* LEOMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244F816394CB30020086C /* LEOMusicViewController.m */; };
-		AF749D74163E2A3F0006129C /* LEONewServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF749D73163E2A3F0006129C /* LEONewServerViewController.m */; };
-		AF749D80163E80A30006129C /* LEODetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF749D7F163E80A30006129C /* LEODetailViewController.m */; };
-		AF749D83163E838C0006129C /* LEOContentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF749D82163E838C0006129C /* LEOContentListCell.m */; };
-		AF7900CE165F58170035EBE4 /* LEODetailMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7900CD165F58170035EBE4 /* LEODetailMusicViewController.m */; };
-		AF7E97A2164BBB2800C865AC /* LEOUploadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E97A1164BBB2800C865AC /* LEOUploadInfo.m */; };
-		AF80C9A8166C575900E322C8 /* LEOResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF80C9A7166C575900E322C8 /* LEOResultView.m */; };
+		AF5A958516491D050065CF85 /* LEOMusicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A958416491D050065CF85 /* LEOMusicItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A8FC172677A900A4DB96 /* LEOWebDAVBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E0172677A900A4DB96 /* LEOWebDAVBaseRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A8FD172677A900A4DB96 /* LEOWebDAVClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E2172677A900A4DB96 /* LEOWebDAVClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A8FE172677A900A4DB96 /* LEOWebDAVCopyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E4172677A900A4DB96 /* LEOWebDAVCopyRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A8FF172677A900A4DB96 /* LEOWebDAVDeleteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E7172677A900A4DB96 /* LEOWebDAVDeleteRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A900172677A900A4DB96 /* LEOWebDAVDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8E9172677A900A4DB96 /* LEOWebDAVDownloadRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A901172677A900A4DB96 /* LEOWebDAVItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8EB172677A900A4DB96 /* LEOWebDAVItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A902172677A900A4DB96 /* LEOWebDAVMakeCollectionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8ED172677A900A4DB96 /* LEOWebDAVMakeCollectionRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A903172677A900A4DB96 /* LEOWebDAVMoveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8EF172677A900A4DB96 /* LEOWebDAVMoveRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A904172677A900A4DB96 /* LEOWebDAVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F1172677A900A4DB96 /* LEOWebDAVParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A905172677A900A4DB96 /* LEOWebDAVPropertyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F3172677A900A4DB96 /* LEOWebDAVPropertyRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A906172677A900A4DB96 /* LEOWebDAVRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F5172677A900A4DB96 /* LEOWebDAVRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A907172677A900A4DB96 /* LEOWebDAVUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F7172677A900A4DB96 /* LEOWebDAVUploadRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A908172677A900A4DB96 /* LEOWebDAVURL.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8F9172677A900A4DB96 /* LEOWebDAVURL.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF60A909172677A900A4DB96 /* LEOWebDAVUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60A8FB172677A900A4DB96 /* LEOWebDAVUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7244E116390C930020086C /* LEOServerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244E016390C930020086C /* LEOServerListCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7244E9163922BF0020086C /* LEOServerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244E8163922BF0020086C /* LEOServerInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7244EC16392F970020086C /* LEOUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244EB16392F970020086C /* LEOUtility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7244F6163947D20020086C /* LEOUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244F5163947D20020086C /* LEOUploadViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7244F916394CB30020086C /* LEOMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7244F816394CB30020086C /* LEOMusicViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF749D74163E2A3F0006129C /* LEONewServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF749D73163E2A3F0006129C /* LEONewServerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF749D80163E80A30006129C /* LEODetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF749D7F163E80A30006129C /* LEODetailViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF749D83163E838C0006129C /* LEOContentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF749D82163E838C0006129C /* LEOContentListCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7900CE165F58170035EBE4 /* LEODetailMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7900CD165F58170035EBE4 /* LEODetailMusicViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF7E97A2164BBB2800C865AC /* LEOUploadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7E97A1164BBB2800C865AC /* LEOUploadInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF80C9A8166C575900E322C8 /* LEOResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF80C9A7166C575900E322C8 /* LEOResultView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF853E4D16436B75004ED6C8 /* res in Resources */ = {isa = PBXBuildFile; fileRef = AF853E4C16436B75004ED6C8 /* res */; };
-		AF856AB7164A129000BFDDFF /* LEOUploadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856AB6164A129000BFDDFF /* LEOUploadListCell.m */; };
-		AF856ABB164A31E700BFDDFF /* LEOUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ABA164A31E700BFDDFF /* LEOUploadView.m */; };
-		AF856ABE164A40A100BFDDFF /* LEOUploadToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ABD164A40A100BFDDFF /* LEOUploadToolBar.m */; };
-		AF856ADA164A601000BFDDFF /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ACC164A601000BFDDFF /* ELCAsset.m */; };
-		AF856ADB164A601000BFDDFF /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ACE164A601000BFDDFF /* ELCAssetCell.m */; };
+		AF856AB7164A129000BFDDFF /* LEOUploadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856AB6164A129000BFDDFF /* LEOUploadListCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF856ABB164A31E700BFDDFF /* LEOUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ABA164A31E700BFDDFF /* LEOUploadView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF856ABE164A40A100BFDDFF /* LEOUploadToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ABD164A40A100BFDDFF /* LEOUploadToolBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF856ADA164A601000BFDDFF /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ACC164A601000BFDDFF /* ELCAsset.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF856ADB164A601000BFDDFF /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856ACE164A601000BFDDFF /* ELCAssetCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF856ADC164A601000BFDDFF /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF856ACF164A601000BFDDFF /* ELCAssetPicker.xib */; };
-		AF856ADD164A601000BFDDFF /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856AD1164A601000BFDDFF /* ELCAssetTablePicker.m */; };
+		AF856ADD164A601000BFDDFF /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856AD1164A601000BFDDFF /* ELCAssetTablePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF856ADE164A601000BFDDFF /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF856AD2164A601000BFDDFF /* ELCAssetTablePicker.xib */; };
-		AF856ADF164A601000BFDDFF /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856AD4164A601000BFDDFF /* ELCImagePickerController.m */; };
+		AF856ADF164A601000BFDDFF /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF856AD4164A601000BFDDFF /* ELCImagePickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF856AE0164A601000BFDDFF /* ELCImagePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF856AD5164A601000BFDDFF /* ELCImagePickerController.xib */; };
 		AF856AE1164A601000BFDDFF /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = AF856AD6164A601000BFDDFF /* Overlay.png */; };
 		AF856AE2164A601000BFDDFF /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF856AD7164A601000BFDDFF /* Overlay@2x.png */; };
 		AF856AE4164A60AE00BFDDFF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF856AE3164A60AE00BFDDFF /* AssetsLibrary.framework */; };
-		AF858239163A880300DD4A1B /* LEOMusicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF858238163A880300DD4A1B /* LEOMusicListCell.m */; };
-		AF85823C163A911E00DD4A1B /* LEOEditToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85823B163A911E00DD4A1B /* LEOEditToolBar.m */; };
-		AF909995165E1724005235AF /* LEOSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF909994165E1723005235AF /* LEOSwitchView.m */; };
-		AF91656A1648C0CE00918E3F /* LEOMusicSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9165691648C0CE00918E3F /* LEOMusicSlider.m */; };
-		AF91656D1648E49D00918E3F /* LEOMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91656C1648E49D00918E3F /* LEOMusicView.m */; };
-		AF93C37D16636C010037A0DC /* LEONetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF93C37C16636C010037A0DC /* LEONetworkController.m */; };
-		AF952B971652384A00533BD8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AF952B961652384A00533BD8 /* MBProgressHUD.m */; };
+		AF858239163A880300DD4A1B /* LEOMusicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF858238163A880300DD4A1B /* LEOMusicListCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF85823C163A911E00DD4A1B /* LEOEditToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85823B163A911E00DD4A1B /* LEOEditToolBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF909995165E1724005235AF /* LEOSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF909994165E1723005235AF /* LEOSwitchView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF91656A1648C0CE00918E3F /* LEOMusicSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9165691648C0CE00918E3F /* LEOMusicSlider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF91656D1648E49D00918E3F /* LEOMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF91656C1648E49D00918E3F /* LEOMusicView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF93C37D16636C010037A0DC /* LEONetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF93C37C16636C010037A0DC /* LEONetworkController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFA0B79F165B557800889383 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFA0B7A1165B557800889383 /* Localizable.strings */; };
-		AFA3A911164218F9005EEB18 /* LEOContentTypeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA3A910164218F9005EEB18 /* LEOContentTypeConvert.m */; };
+		AFA3A911164218F9005EEB18 /* LEOContentTypeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA3A910164218F9005EEB18 /* LEOContentTypeConvert.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFABEA081635498700EDCCF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFABEA071635498700EDCCF3 /* UIKit.framework */; };
 		AFABEA0A1635498700EDCCF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFABEA091635498700EDCCF3 /* Foundation.framework */; };
 		AFABEA0C1635498700EDCCF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFABEA0B1635498700EDCCF3 /* CoreGraphics.framework */; };
 		AFABEA121635498700EDCCF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFABEA101635498700EDCCF3 /* InfoPlist.strings */; };
 		AFABEA141635498700EDCCF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABEA131635498700EDCCF3 /* main.m */; };
-		AFABEA181635498700EDCCF3 /* LEOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABEA171635498700EDCCF3 /* LEOAppDelegate.m */; };
-		AFCCFC791650A72500B68939 /* LEOListExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCCFC781650A72500B68939 /* LEOListExtendView.m */; };
-		AFCCFC991651090100B68939 /* LEORenameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCCFC981651090000B68939 /* LEORenameViewController.m */; };
-		AFCD00B016709A4F00750BFB /* LEOCameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCD00AF16709A4F00750BFB /* LEOCameraPickerController.m */; };
-		AFD3FAB116549C7000A0BEDD /* LEOThumbnailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3FAB016549C7000A0BEDD /* LEOThumbnailItem.m */; };
-		AFD9426C16476A3700025AA4 /* LEODetailVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD9426B16476A3600025AA4 /* LEODetailVideoViewController.m */; };
-		AFD9427016479B8E00025AA4 /* LEOVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD9426F16479B8E00025AA4 /* LEOVideoViewController.m */; };
+		AFABEA181635498700EDCCF3 /* LEOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABEA171635498700EDCCF3 /* LEOAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFCCFC791650A72500B68939 /* LEOListExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCCFC781650A72500B68939 /* LEOListExtendView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFCCFC991651090100B68939 /* LEORenameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCCFC981651090000B68939 /* LEORenameViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFCD00B016709A4F00750BFB /* LEOCameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCD00AF16709A4F00750BFB /* LEOCameraPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFD3FAB116549C7000A0BEDD /* LEOThumbnailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD3FAB016549C7000A0BEDD /* LEOThumbnailItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFD9426C16476A3700025AA4 /* LEODetailVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD9426B16476A3600025AA4 /* LEODetailVideoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFD9427016479B8E00025AA4 /* LEOVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD9426F16479B8E00025AA4 /* LEOVideoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFD9427216479E4600025AA4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD9427116479E4600025AA4 /* MediaPlayer.framework */; };
-		AFE344D316533F900026B089 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE344D216533F900026B089 /* EGORefreshTableHeaderView.m */; };
+		AFE344D316533F900026B089 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE344D216533F900026B089 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFE344D6165343ED0026B089 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE344D5165343ED0026B089 /* QuartzCore.framework */; };
-		AFE3451316537B9C0026B089 /* KTPhotoBrowserGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3450716537B9C0026B089 /* KTPhotoBrowserGlobal.m */; };
-		AFE3451416537B9C0026B089 /* KTPhotoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3450916537B9C0026B089 /* KTPhotoScrollViewController.m */; };
-		AFE3451516537B9C0026B089 /* KTPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3450B16537B9C0026B089 /* KTPhotoView.m */; };
-		AFE3451B16537F1A0026B089 /* LEODoubleModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3451A16537F190026B089 /* LEODoubleModeViewController.m */; };
-		AFE3451E165382910026B089 /* LEOImageDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3451D165382910026B089 /* LEOImageDataSource.m */; };
-		AFE345241653A5890026B089 /* LEOImageThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE345231653A5890026B089 /* LEOImageThumbnailCell.m */; };
-		AFE4F6BC164B5B4500E82A8D /* LEOChoosePathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F6BB164B5B4500E82A8D /* LEOChoosePathViewController.m */; };
-		AFE4F6C0164B95B500E82A8D /* LEONewFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F6BF164B95B400E82A8D /* LEONewFolderViewController.m */; };
-		AFE8E7751682AEFE00FFC55E /* LEOChooseCopyPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8E7741682AEFE00FFC55E /* LEOChooseCopyPathViewController.m */; };
+		AFE3451316537B9C0026B089 /* KTPhotoBrowserGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3450716537B9C0026B089 /* KTPhotoBrowserGlobal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE3451416537B9C0026B089 /* KTPhotoScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3450916537B9C0026B089 /* KTPhotoScrollViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE3451516537B9C0026B089 /* KTPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3450B16537B9C0026B089 /* KTPhotoView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE3451B16537F1A0026B089 /* LEODoubleModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3451A16537F190026B089 /* LEODoubleModeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE3451E165382910026B089 /* LEOImageDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE3451D165382910026B089 /* LEOImageDataSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE345241653A5890026B089 /* LEOImageThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE345231653A5890026B089 /* LEOImageThumbnailCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE4F6BC164B5B4500E82A8D /* LEOChoosePathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F6BB164B5B4500E82A8D /* LEOChoosePathViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE4F6C0164B95B500E82A8D /* LEONewFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE4F6BF164B95B400E82A8D /* LEONewFolderViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFE8E7751682AEFE00FFC55E /* LEOChooseCopyPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8E7741682AEFE00FFC55E /* LEOChooseCopyPathViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFE9BC30166F2E630098A306 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC2F166F2E630098A306 /* icon.png */; };
 		AFE9BC32166F2E680098A306 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC31166F2E680098A306 /* icon@2x.png */; };
 		AFE9BC34166F2E720098A306 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC33166F2E720098A306 /* Default.png */; };
 		AFE9BC36166F2E830098A306 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC35166F2E830098A306 /* Default@2x.png */; };
 		AFE9BC38166F2EA20098A306 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC37166F2EA20098A306 /* Default-568h@2x.png */; };
-		AFEAD4C3163643FB00DB48A1 /* LEOServerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4C2163643FB00DB48A1 /* LEOServerListViewController.m */; };
-		AFEAD4E916367AF800DB48A1 /* LEOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4E816367AF800DB48A1 /* LEOSettingsViewController.m */; };
-		AFEAD4F0163681F800DB48A1 /* LEOTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4EF163681F800DB48A1 /* LEOTabBarViewController.m */; };
-		AFEAD4FB1636AA3200DB48A1 /* LEOTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4FA1636AA3200DB48A1 /* LEOTabBar.m */; };
-		AFFA98A51675AE1200D9AC5B /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFA98A41675AE1200D9AC5B /* SFHFKeychainUtils.m */; };
+		AFEAD4C3163643FB00DB48A1 /* LEOServerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4C2163643FB00DB48A1 /* LEOServerListViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFEAD4E916367AF800DB48A1 /* LEOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4E816367AF800DB48A1 /* LEOSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFEAD4F0163681F800DB48A1 /* LEOTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4EF163681F800DB48A1 /* LEOTabBarViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFEAD4FB1636AA3200DB48A1 /* LEOTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4FA1636AA3200DB48A1 /* LEOTabBar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AFFA98A51675AE1200D9AC5B /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFA98A41675AE1200D9AC5B /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFFA98A81675B36400D9AC5B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFA98A71675B36400D9AC5B /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -202,8 +201,6 @@
 		AF91656C1648E49D00918E3F /* LEOMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOMusicView.m; path = classes/View/LEOMusicView.m; sourceTree = "<group>"; };
 		AF93C37B16636C010037A0DC /* LEONetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEONetworkController.h; path = classes/Controller/LEONetworkController.h; sourceTree = "<group>"; };
 		AF93C37C16636C010037A0DC /* LEONetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEONetworkController.m; path = classes/Controller/LEONetworkController.m; sourceTree = "<group>"; };
-		AF952B951652384A00533BD8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = classes/Utilities/MBProgressHUD.h; sourceTree = "<group>"; };
-		AF952B961652384A00533BD8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = classes/Utilities/MBProgressHUD.m; sourceTree = "<group>"; };
 		AFA0B7A0165B557800889383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AFA0B7A2165B55FD00889383 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		AFA0B7A3165B55FD00889383 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -540,8 +537,6 @@
 				AFFA98A41675AE1200D9AC5B /* SFHFKeychainUtils.m */,
 				AFE344D116533F900026B089 /* EGORefreshTableHeaderView.h */,
 				AFE344D216533F900026B089 /* EGORefreshTableHeaderView.m */,
-				AF952B951652384A00533BD8 /* MBProgressHUD.h */,
-				AF952B961652384A00533BD8 /* MBProgressHUD.m */,
 				AF2858EF1637D951006521BF /* LEODefines.h */,
 				AF7244EA16392F970020086C /* LEOUtility.h */,
 				AF7244EB16392F970020086C /* LEOUtility.m */,
@@ -710,7 +705,6 @@
 				AF7E97A2164BBB2800C865AC /* LEOUploadInfo.m in Sources */,
 				AFCCFC791650A72500B68939 /* LEOListExtendView.m in Sources */,
 				AFCCFC991651090100B68939 /* LEORenameViewController.m in Sources */,
-				AF952B971652384A00533BD8 /* MBProgressHUD.m in Sources */,
 				AFE344D316533F900026B089 /* EGORefreshTableHeaderView.m in Sources */,
 				AFE3451316537B9C0026B089 /* KTPhotoBrowserGlobal.m in Sources */,
 				AFE3451416537B9C0026B089 /* KTPhotoScrollViewController.m in Sources */,
@@ -823,6 +817,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B37672534032CDFCC1992C3C /* Pods-TeamDisk.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -842,6 +837,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EAA57CC12EEB9FF3AD403E4 /* Pods-TeamDisk.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Automatic;

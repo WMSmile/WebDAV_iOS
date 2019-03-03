@@ -130,8 +130,8 @@
 
 - (NSArray*)assetsForIndexPath:(NSIndexPath*)_indexPath {
     
-	int index = (_indexPath.row*4);
-	int maxIndex = (_indexPath.row*4+3);
+	NSInteger index = (_indexPath.row*4);
+	NSInteger maxIndex = (_indexPath.row*4+3);
     
 	// NSLog(@"Getting assets for %d to %d with array count %d", index, maxIndex, [assets count]);
     

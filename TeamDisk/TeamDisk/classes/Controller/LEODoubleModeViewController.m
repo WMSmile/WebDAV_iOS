@@ -256,7 +256,7 @@
 #pragma mark - Request Methods
 -(void)setupClient
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOServerInfo *info=delegate.currentServer;
     _currentClient=[[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
                                                 andUserName:info.userName
@@ -413,7 +413,7 @@
             _loading = NO;
             [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:_contentListView];
         }
-        LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+        LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
 //        [delegate.window setRootViewController:delegate.rootTabBarController];
         [delegate clearCurrentServer];
     }else {
@@ -424,13 +424,13 @@
 -(void)editModeOfList {
     [self resetExtendCellView];
     [_contentListView setEditing:!_contentListView.editing animated:YES];
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     if(_contentListView.editing){
         //编辑状态
         [self resetUI:YES];
         [editButtonView setTitle: NSLocalizedString(@"Done", @"") forState:UIControlStateNormal];
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)]){
-            [delegate.window.rootViewController hideTabBar:YES];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:YES];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:NO];
@@ -444,7 +444,7 @@
     }else{
         [editButtonView setTitle: NSLocalizedString(@"Edit", @"") forState:UIControlStateNormal];
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)]){
-            [delegate.window.rootViewController hideTabBar:NO];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:NO];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:YES];
@@ -482,7 +482,7 @@
 
 -(void)uploadToolBar:(BOOL)isChoose
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOTabBarViewController *root=(LEOTabBarViewController *)delegate.window.rootViewController;
     if (isChoose) {
         // 显示上传目录选择视图
@@ -909,7 +909,7 @@
         item=[_contentArray objectAtIndex:longPressIndexPath.row];
     }
     // 需要判断，如果跨server,需要单独处理
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication]delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication]delegate];
     LEOServerInfo *currentServer=delegate.currentServer;
     if ([serverInfo isEqual:currentServer]) {
         // 当前server, 使用copy方法
@@ -1030,7 +1030,7 @@
 //    return [_contentArray count];
     if (isThumbnail) {
         NSInteger count=ceil([_contentArray count]/4.0);
-        NSLog(@"count:%d/%d",count,[_contentArray count]);
+        NSLog(@"count:%ld/%ld",count,[_contentArray count]);
         return count;
     }else{
         return [_contentArray count];
@@ -1205,7 +1205,7 @@
         }else {
             [_editToolBar setButtonStatus:NO AtIndex:2];
         }
-        NSLog(@"thumbnaildeleteset:%d",[_thumbnailDeleteSet count]);
+        NSLog(@"thumbnaildeleteset:%lu",(unsigned long)[_thumbnailDeleteSet count]);
     } else {
         // 查看状态
         if (longPressIndexPath!=nil) {
@@ -1299,7 +1299,7 @@
         // 列表视图
         item=[_contentArray objectAtIndex:longPressIndexPath.row];
     }
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication]delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication]delegate];
     [delegate.musicVC addMusic:item];
     [self resetExtendCellView];
 }

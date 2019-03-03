@@ -93,7 +93,7 @@
 
 -(void)configAppMusic
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication]delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication]delegate];
     if (delegate.musicVC!=nil && [delegate.musicVC isPlaying]) {
         [delegate.musicVC pauseCurrentMusic];
     }
@@ -199,17 +199,17 @@
 
 -(void)hideToolBar:(BOOL)isHide
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (isHide) {
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBarWithoutAnim:)]){
-            [delegate.window.rootViewController hideTabBarWithoutAnim:YES];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBarWithoutAnim:YES];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditToolBarWithoutAnim:)]){
             [_editToolBar hideEditToolBarWithoutAnim:NO];
         }
     }else {
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBarWithoutAnim:)]){
-            [delegate.window.rootViewController hideTabBarWithoutAnim:NO];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBarWithoutAnim:NO];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditToolBarWithoutAnim:)]){
             [_editToolBar hideEditToolBarWithoutAnim:YES];
@@ -219,8 +219,8 @@
 
 -(void)addMusicToList
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication]delegate];
-    BOOL result=[delegate.musicVC addMusic:_item];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSInteger result=[delegate.musicVC addMusic:_item];
     if (result>-1) {
         [self setupProgressHD:NSLocalizedString(@"Add Success", @"") isDone:YES];
     } else {

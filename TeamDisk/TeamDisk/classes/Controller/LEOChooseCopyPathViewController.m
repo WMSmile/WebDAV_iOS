@@ -193,7 +193,7 @@
 -(void)setupClient:(LEOServerInfo *)info
 {
     if (info==nil) {
-        LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+        LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
         _info=[[LEOServerInfo alloc] initWithInfo:delegate.currentServer];
     } else {
         _info=[[LEOServerInfo alloc] initWithInfo:info];
@@ -310,7 +310,7 @@
     if ([self.parent respondsToSelector:@selector(beforeFinishChooseCopyPath)]) {
         [self.parent beforeFinishChooseCopyPath];
     }
-    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)gotoNextSection:(LEOWebDAVItem *)item

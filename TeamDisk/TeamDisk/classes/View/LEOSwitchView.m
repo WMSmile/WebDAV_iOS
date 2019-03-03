@@ -67,7 +67,7 @@
         [_contentLabel setBackgroundColor:[UIColor clearColor]];
         [_contentLabel setTextColor:[UIColor whiteColor]];
         [_contentLabel setFont:[UIFont boldSystemFontOfSize:20]];
-        _contentLabel.textAlignment=UITextAlignmentCenter;
+        _contentLabel.textAlignment=NSTextAlignmentCenter;
         [self addSubview:_contentLabel];
         [self setEnabled:NO];
     }

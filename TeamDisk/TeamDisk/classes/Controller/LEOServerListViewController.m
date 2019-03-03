@@ -77,7 +77,7 @@
     footer=[[UIView alloc]initWithFrame:CGRectZero];
     frame.size.height=kServerListCellHeight;
     labelFooter=[[UILabel alloc] initWithFrame:frame];
-    labelFooter.textAlignment=UITextAlignmentCenter;
+    labelFooter.textAlignment=NSTextAlignmentCenter;
     labelFooter.text=NSLocalizedString(@"Press 'Edit' to Add New Server", @"");
     labelFooter.textColor=[UIColor grayColor];
     labelFooter.backgroundColor=[UIColor lightGrayColor];
@@ -169,13 +169,13 @@
 // 切换编辑模式
 -(void)editModeOfList {
     [_serverListView setEditing:!_serverListView.editing animated:YES];
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     if(_serverListView.editing){
         [editButtonView setTitle: NSLocalizedString(@"Done", @"") forState:UIControlStateNormal];
         labelFooter.text=NSLocalizedString(@"Press 'Add' to Create New Server Info", @"");
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)])
         {
-            [delegate.window.rootViewController hideTabBar:YES];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:YES];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:NO];
@@ -185,7 +185,7 @@
         labelFooter.text=NSLocalizedString(@"Press 'Edit' to Add New Server", @"");
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)])
         {
-            [delegate.window.rootViewController hideTabBar:NO];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:NO];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:YES];
@@ -205,7 +205,7 @@
 
 -(void)loginServer:(LEOServerInfo *)server
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
 //    [delegate setupClient:server];
 //    [delegate setupNetwork:server];
     [delegate setupCurrentServer:server];
@@ -222,7 +222,7 @@
 {
     if ([aRequest isKindOfClass:[LEOWebDAVPropertyRequest class]]) {
 //        NSLog(@"success:%@",result);
-        LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+        LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
         [delegate.window setRootViewController:delegate.serverTabBarController];
     }
 }

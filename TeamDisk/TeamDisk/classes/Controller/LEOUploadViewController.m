@@ -125,7 +125,7 @@
 #pragma mark - Private method
 -(void)editModeOfList {
     [_uploadListView setEditing:!_uploadListView.editing animated:YES];
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOTabBarViewController *root=(LEOTabBarViewController *)delegate.window.rootViewController;
     if(_uploadListView.editing){
         [editButtonView setTitle: NSLocalizedString(@"Done", @"") forState:UIControlStateNormal];
@@ -148,7 +148,7 @@
 
 -(void)uploadToolBar:(BOOL)isChoose
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOTabBarViewController *root=(LEOTabBarViewController *)delegate.window.rootViewController;
     if (isChoose) {
         // 显示上传目录选择视图
@@ -195,7 +195,7 @@
     if (_currentClient!=nil) {
         [self removeClient];
     }
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOServerInfo *info=delegate.currentServer;
     _currentClient=[[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
                                                 andUserName:info.userName
@@ -315,13 +315,13 @@
 - (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info
 {
     [self uploadToolBar:NO];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
     if (_uploadCollection) {
         [_uploadCollection release];
         _uploadCollection=nil;
     }
     _uploadCollection=[[NSString alloc] initWithFormat:@"%@",picker.uploadPath];
-    NSLog(@"total:%d; path:%@",[info count],_uploadCollection);
+    NSLog(@"total:%lu; path:%@",(unsigned long)[info count],_uploadCollection);
     
     for (NSDictionary *dic in info) {
         LEOUploadInfo *one=[[LEOUploadInfo alloc] initWithDictionary:dic];
@@ -335,7 +335,7 @@
 - (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker
 {
     [self uploadToolBar:NO];
-    [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - TableView DataSource

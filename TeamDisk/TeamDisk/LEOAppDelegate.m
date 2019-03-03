@@ -39,7 +39,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-//    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+//    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
 //    CGRect frame=self.window.frame;
 //    NSLog(@"window:%f,%f,%f,%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
 

@@ -73,7 +73,7 @@
     _newNameTextField=[[UITextField alloc] initWithFrame:frame];
     [_newNameTextField setDelegate:self];
     _newNameTextField.borderStyle=UITextBorderStyleRoundedRect;
-    _newNameTextField.textAlignment=UITextAlignmentLeft;
+    _newNameTextField.textAlignment=NSTextAlignmentLeft;
     _newNameTextField.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     _newNameTextField.font=[UIFont systemFontOfSize:kUploadNewFolderFontSz];
     _newNameTextField.placeholder=NSLocalizedString(@"Please Input New Name",@"");
@@ -108,7 +108,8 @@
 -(NSString *)generateDisplayOldName
 {
     NSString *display=_currentItem.displayName;
-    if (_currentItem.type==LEOContentItemTypeCollection) {
+    NSInteger aaa = _currentItem.type;
+    if (aaa ==LEOContentItemTypeCollection) {
         if ([display hasSuffix:@"/"]) {
             display=[display substringToIndex:display.length-1];
         }
@@ -182,7 +183,7 @@
 -(void)cancelChoose
 {
     [self beforeBack];
-    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)setupProgressHD:(NSString *)text isDone:(BOOL)done
@@ -257,7 +258,7 @@
 #pragma mark - Request Methods
 -(void)setupClient
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOServerInfo *info=delegate.currentServer;
     _currentClient=[[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
                                                 andUserName:info.userName

@@ -64,7 +64,8 @@ const CGFloat ktkDefaultToolbarHeight = 44;
        _requestArray=[[NSMutableArray alloc] init];
      // Make sure to set wantsFullScreenLayout or the photo
      // will not display behind the status bar.
-     [self setWantsFullScreenLayout:YES];
+       self.extendedLayoutIncludesOpaqueBars = YES;
+        
 
      BOOL isStatusbarHidden = [[UIApplication sharedApplication] isStatusBarHidden];
      [self setStatusbarHidden:isStatusbarHidden];
@@ -126,7 +127,7 @@ const CGFloat ktkDefaultToolbarHeight = 44;
    }
    // Then ensure translucency. Without it, the view will appear below rather than under it.  
    [navbar setTranslucent:YES];
-   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];
+   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 
    // Set the scroll view's content size, auto-scroll to the stating photo,
    // and setup the other display elements.
@@ -398,7 +399,7 @@ const CGFloat ktkDefaultToolbarHeight = 44;
 - (void)setCurrentIndex:(NSInteger)newIndex
 {
    currentIndex_ = newIndex;
-    NSLog(@"index:%d",currentIndex_);
+    NSLog(@"index:%ld",(long)currentIndex_);
     if (currentIndex_>-1 && currentIndex_<[dataSource_ numberOfPhotos]) {
         _item=[dataSource_ itemAtIndex:currentIndex_];
     }
@@ -432,7 +433,7 @@ const CGFloat ktkDefaultToolbarHeight = 44;
        [[UIApplication sharedApplication] setStatusBarHidden:hide withAnimation:NO];
      } else {  // Deprecated in iOS 3.2+.
        id sharedApp = [UIApplication sharedApplication];  // Get around deprecation warnings.
-       [sharedApp setStatusBarHidden:hide animated:NO];
+       [sharedApp setStatusBarHidden:hide withAnimation:UIStatusBarAnimationSlide];
      }
    }
 

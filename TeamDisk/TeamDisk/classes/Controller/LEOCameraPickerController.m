@@ -120,9 +120,9 @@
     UIImagePickerController *picker=[[UIImagePickerController alloc] init];
     picker.delegate=self;
     picker.navigationBarHidden=YES;
-    picker.wantsFullScreenLayout=NO;
+    picker.extendedLayoutIncludesOpaqueBars=NO;
     picker.sourceType=UIImagePickerControllerSourceTypeCamera;
-    [self presentModalViewController:picker animated:YES];
+    [self presentViewController:picker animated:YES completion:NULL];
     [picker release];
 }
 
@@ -185,14 +185,14 @@
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [picker dismissModalViewControllerAnimated:NO];
+    [picker dismissViewControllerAnimated:NO completion:NULL];
     _info=[info copy];
     _previewImageView.image=[info objectForKey:UIImagePickerControllerOriginalImage];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    [picker dismissModalViewControllerAnimated:NO];
+    [picker dismissViewControllerAnimated:NO completion:NULL];
     if (self.delegate!=nil && [self.delegate respondsToSelector:@selector(leoCameraPickerControllerDidCancel:)]) {
         [self.delegate leoCameraPickerControllerDidCancel:self];
     }

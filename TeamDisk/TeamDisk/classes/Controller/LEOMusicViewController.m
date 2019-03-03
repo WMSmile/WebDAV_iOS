@@ -245,7 +245,7 @@
     if (_currentClient!=nil) {
         [self removeClient];
     }
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOServerInfo *info=delegate.currentServer;
     _currentClient=[[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
                                                 andUserName:info.userName

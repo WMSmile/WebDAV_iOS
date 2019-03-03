@@ -26,7 +26,7 @@
         _descriptionLabel.backgroundColor = [UIColor clearColor];
         _descriptionLabel.font = [UIFont systemFontOfSize:kServerListCellDesLbFontSz];
         _descriptionLabel.textColor = [UIColor blackColor];
-        _descriptionLabel.lineBreakMode = UILineBreakModeTailTruncation;
+        _descriptionLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [self.contentView addSubview:_descriptionLabel];
         
         CGRect desFrame=_descriptionLabel.frame;
@@ -34,8 +34,8 @@
         _userNameLabel.backgroundColor = [UIColor clearColor];
         _userNameLabel.font = [UIFont systemFontOfSize:kServerListCellDetLbFontSz];
         _userNameLabel.textColor = [UIColor blackColor];
-        _userNameLabel.textAlignment = UITextAlignmentLeft;
-        _userNameLabel.lineBreakMode = UILineBreakModeTailTruncation;
+        _userNameLabel.textAlignment = NSTextAlignmentLeft;
+        _userNameLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [self.contentView addSubview:_userNameLabel];
         
         CGRect userFrame=_userNameLabel.frame;
@@ -43,8 +43,8 @@
         _urlLabel.backgroundColor = [UIColor clearColor];
         _urlLabel.font = [UIFont systemFontOfSize:kServerListCellDetLbFontSz];
         _urlLabel.textColor = [UIColor blackColor];
-        _urlLabel.textAlignment = UITextAlignmentLeft;
-        _urlLabel.lineBreakMode = UILineBreakModeTailTruncation;
+        _urlLabel.textAlignment = NSTextAlignmentLeft;
+        _urlLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [self.contentView addSubview:_urlLabel];
         
         _accessoryImage=[[UIImageView alloc] initWithImage:[UIImage imageNamed:kCellAccessory]];

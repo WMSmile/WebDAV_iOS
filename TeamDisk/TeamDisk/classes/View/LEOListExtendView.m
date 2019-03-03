@@ -55,7 +55,7 @@
 -(void)setupButtons:(NSArray *)items{
     if([items count]<1)
         return;
-    int count=[items count];
+    NSInteger count= [items count];
     _buttons=[[NSMutableArray alloc]initWithCapacity:count];
     CGFloat width=self.frame.size.width/count;
     UIButton *btn;
@@ -63,7 +63,7 @@
         btn=[UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag=i+1;
         btn.titleLabel.numberOfLines=0;
-        btn.titleLabel.textAlignment=UITextAlignmentCenter;
+        btn.titleLabel.textAlignment=NSTextAlignmentCenter;
         btn.frame=CGRectMake(width*i,0,width,kContentListCellExtend);
         [btn setTitle:[items objectAtIndex:i] forState:UIControlStateNormal];
         [[btn titleLabel] setFont:[UIFont systemFontOfSize:kEditToolBarBtnFontSz]];

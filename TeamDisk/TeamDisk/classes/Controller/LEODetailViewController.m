@@ -102,7 +102,7 @@
 #pragma mark - Request Methods
 -(void)setupClient
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOServerInfo *info=delegate.currentServer;
     _currentClient=[[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
                                                 andUserName:info.userName
@@ -218,17 +218,17 @@
 
 -(void)changeToolBar:(BOOL)isDetail
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (isDetail) {
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:fromLeft:)]){
-            [delegate.window.rootViewController hideTabBar:YES fromLeft:NO];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:YES fromLeft:NO];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:fromLeft:)]){
             [_editToolBar hideEditTooBar:NO fromLeft:NO];
         }
     }else {
         if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:fromLeft:)]){
-            [delegate.window.rootViewController hideTabBar:NO fromLeft:NO];
+            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:NO fromLeft:NO];
         }
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:fromLeft:)]){
             [_editToolBar hideEditTooBar:YES fromLeft:NO];

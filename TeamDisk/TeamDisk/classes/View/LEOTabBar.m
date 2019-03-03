@@ -63,7 +63,7 @@
 -(void)setupButtons:(NSArray *)items {
     if([items count]<1)
         return;
-    int count=[items count]/2;
+    NSInteger count=[items count]/2;
     _buttons=[[NSMutableArray alloc]initWithCapacity:count];
     CGFloat width=self.frame.size.width/count;
     UIButton *btn;

@@ -45,7 +45,7 @@
         _fileNameLabel.backgroundColor = [UIColor clearColor];
         _fileNameLabel.font = [UIFont systemFontOfSize:kUploadCellDesLbFontSz];
         _fileNameLabel.textColor = [UIColor blackColor];
-        _fileNameLabel.lineBreakMode = UILineBreakModeTailTruncation;
+        _fileNameLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [self.contentView addSubview:_fileNameLabel];
         
         CGRect desFrame=_fileNameLabel.frame;
@@ -53,8 +53,8 @@
         _detailLabel.backgroundColor = [UIColor clearColor];
         _detailLabel.font = [UIFont systemFontOfSize:kUploadCellDetLbFontSz];
         _detailLabel.textColor = [UIColor blackColor];
-        _detailLabel.textAlignment = UITextAlignmentLeft;
-        _detailLabel.lineBreakMode = UILineBreakModeTailTruncation;
+        _detailLabel.textAlignment = NSTextAlignmentLeft;
+        _detailLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [self.contentView addSubview:_detailLabel];
         
         CGRect contentFrame=self.contentView.frame;

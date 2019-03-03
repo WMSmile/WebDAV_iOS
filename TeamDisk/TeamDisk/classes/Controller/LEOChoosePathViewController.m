@@ -147,7 +147,7 @@
 #pragma mark - Request Methods
 -(void)setupClient
 {
-    LEOAppDelegate *delegate=[[UIApplication sharedApplication] delegate];
+    LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     LEOServerInfo *info=delegate.currentServer;
     _currentClient=[[LEOWebDAVClient alloc] initWithRootURL:[NSURL URLWithString:info.url]
                                                 andUserName:info.userName
@@ -237,7 +237,7 @@
     if ([self.parent respondsToSelector:@selector(beforeFinishChooseMovePath)]) {
         [self.parent beforeFinishChooseMovePath];
     }
-    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)gotoNextSection:(LEOWebDAVItem *)item

@@ -59,7 +59,7 @@
 -(void)setupButtons:(NSArray *)items{
     if([items count]<1)
         return;
-    int count=[items count];
+    NSInteger count=[items count];
     _buttons=[[NSMutableArray alloc]initWithCapacity:count];
     _titles=[[NSMutableDictionary alloc] init];
     CGFloat topX=(kLEOTabBarHeight-kEditToolBarBtnHeight)/2;
@@ -75,7 +75,7 @@
         }
         [btn setTitle:[items objectAtIndex:i] forState:UIControlStateNormal];
         btn.titleEdgeInsets=UIEdgeInsetsMake(kEditToolBarBtnLabelMargin, kEditToolBarBtnLabelMargin, kEditToolBarBtnLabelMargin, kEditToolBarBtnLabelMargin);
-        btn.titleLabel.textAlignment=UITextAlignmentCenter;
+        btn.titleLabel.textAlignment=NSTextAlignmentCenter;
         btn.titleLabel.numberOfLines=2;
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateDisabled];
@@ -124,19 +124,19 @@
 
 -(void)resetButtons
 {
-    int count=[_buttons count];
+    NSInteger count=[_buttons count];
     for (int i=0; i<count; i++) {
         UIButton *btn=[_buttons objectAtIndex:i];
         if (btn.tag<0) {
             btn.tag=-btn.tag;
-            [btn setTitle:[_titles objectForKey:[NSString stringWithFormat:@"%d",btn.tag]] forState:UIControlStateNormal];
+            [btn setTitle:[_titles objectForKey:[NSString stringWithFormat:@"%ld",(long)btn.tag]] forState:UIControlStateNormal];
         }
     }
 }
 
 -(void)touchUp:(UIButton *)button {
     button.tag=-button.tag;
-    [button setTitle:[_titles objectForKey:[NSString stringWithFormat:@"%d",button.tag]] forState:UIControlStateNormal];
+    [button setTitle:[_titles objectForKey:[NSString stringWithFormat:@"%ld",(long)button.tag]] forState:UIControlStateNormal];
     if([self.delegate respondsToSelector:@selector(didSelectedEditToolBarIndex:)]){
         [self.delegate didSelectedEditToolBarIndex:button.tag];
     }
@@ -158,7 +158,7 @@
 
 -(void)setToggleTextMore:(NSString *)string1 AtIndex:(NSInteger)index
 {
-    [_titles setObject:string1 forKey:[NSString stringWithFormat:@"%d",-index-1]];
+    [_titles setObject:string1 forKey:[NSString stringWithFormat:@"%ld",-index-1]];
 }
 
 -(void)hideEditTooBar:(BOOL)hide {
