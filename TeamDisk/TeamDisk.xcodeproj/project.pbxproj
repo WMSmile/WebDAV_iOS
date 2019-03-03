@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		608B86A4222BCF5A00EE5BBA /* XDNavgationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608B86A3222BCF5A00EE5BBA /* XDNavgationViewController.m */; };
 		608B86A8222BD44100EE5BBA /* UINavigationController+SXFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 608B86A6222BD44100EE5BBA /* UINavigationController+SXFullScreen.m */; };
 		608B86AB222BD45400EE5BBA /* NSObject+SXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 608B86AA222BD45400EE5BBA /* NSObject+SXRuntime.m */; };
+		608B86AE222BDB5300EE5BBA /* XDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608B86AD222BDB5300EE5BBA /* XDBaseViewController.m */; };
 		632B89CCA81FEAB7F77E6726 /* libPods-TeamDisk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */; };
 		AF1254EF168062880014D1F9 /* LEOAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254EE168062880014D1F9 /* LEOAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF1254F316806D180014D1F9 /* LEOAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254F216806D180014D1F9 /* LEOAssetTablePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -124,6 +125,8 @@
 		608B86A7222BD44100EE5BBA /* UINavigationController+SXFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SXFullScreen.h"; sourceTree = "<group>"; };
 		608B86A9222BD45400EE5BBA /* NSObject+SXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXRuntime.h"; sourceTree = "<group>"; };
 		608B86AA222BD45400EE5BBA /* NSObject+SXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXRuntime.m"; sourceTree = "<group>"; };
+		608B86AC222BDB5300EE5BBA /* XDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDBaseViewController.h; sourceTree = "<group>"; };
+		608B86AD222BDB5300EE5BBA /* XDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDBaseViewController.m; sourceTree = "<group>"; };
 		74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamDisk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAA57CC12EEB9FF3AD403E4 /* Pods-TeamDisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDisk/Pods-TeamDisk.release.xcconfig"; sourceTree = "<group>"; };
 		AF1254ED168062880014D1F9 /* LEOAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAlbumPickerController.h; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 				608B8699222BB9ED00EE5BBA /* XDRuntimeUtility.m */,
 				608B86A2222BCF5A00EE5BBA /* XDNavgationViewController.h */,
 				608B86A3222BCF5A00EE5BBA /* XDNavgationViewController.m */,
+				608B86AC222BDB5300EE5BBA /* XDBaseViewController.h */,
+				608B86AD222BDB5300EE5BBA /* XDBaseViewController.m */,
 				608B8691222BB98C00EE5BBA /* Category */,
 			);
 			path = V2.0;
@@ -650,9 +655,9 @@
 		AFABE9FA1635498700EDCCF3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = LEO;
+				CLASSPREFIX = XD;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = SAE;
+				ORGANIZATIONNAME = "Wei & Meng";
 				TargetAttributes = {
 					AFABEA021635498700EDCCF3 = {
 						DevelopmentTeam = RCWE4X8J89;
@@ -661,7 +666,7 @@
 				};
 			};
 			buildConfigurationList = AFABE9FD1635498700EDCCF3 /* Build configuration list for PBXProject "TeamDisk" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -793,6 +798,7 @@
 				AF60A8FC172677A900A4DB96 /* LEOWebDAVBaseRequest.m in Sources */,
 				AF60A8FD172677A900A4DB96 /* LEOWebDAVClient.m in Sources */,
 				AF60A8FE172677A900A4DB96 /* LEOWebDAVCopyRequest.m in Sources */,
+				608B86AE222BDB5300EE5BBA /* XDBaseViewController.m in Sources */,
 				AF60A8FF172677A900A4DB96 /* LEOWebDAVDeleteRequest.m in Sources */,
 				AF60A900172677A900A4DB96 /* LEOWebDAVDownloadRequest.m in Sources */,
 				AF60A901172677A900A4DB96 /* LEOWebDAVItem.m in Sources */,

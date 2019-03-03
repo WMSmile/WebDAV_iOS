@@ -6,12 +6,12 @@
 //  Copyright (c) 2012年 SAE. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XDBaseViewController.h"
 #import "MBProgressHUD.h"
 @class LEOServerListViewController;
 @class LEOServerInfo;
 
-@interface LEONewServerViewController : UIViewController<UITextFieldDelegate,MBProgressHUDDelegate>
+@interface LEONewServerViewController : XDBaseViewController<UITextFieldDelegate,MBProgressHUDDelegate>
 -(void)setServerListVCInstance:(LEOServerListViewController *)one;
 -(id)initWithServerInfo:(LEOServerInfo *)info atIndex:(NSInteger)index;
 @end
