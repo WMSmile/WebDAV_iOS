@@ -91,7 +91,15 @@
     [self initListFromLocal];
     [self refreshView];
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
 -(void)dealloc
 {
     [super dealloc];
@@ -174,20 +182,14 @@
     if(_serverListView.editing){
         [editButtonView setTitle: NSLocalizedString(@"Done", @"") forState:UIControlStateNormal];
         labelFooter.text=NSLocalizedString(@"Press 'Add' to Create New Server Info", @"");
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)])
-        {
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:YES];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:YES animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:NO];
         }
     }else{
         [editButtonView setTitle: NSLocalizedString(@"Edit", @"") forState:UIControlStateNormal];
         labelFooter.text=NSLocalizedString(@"Press 'Edit' to Add New Server", @"");
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)])
-        {
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:NO];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:NO animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:YES];
         }

@@ -82,13 +82,13 @@
         }
         _extendView.delegate=self;
         
-        _accessoryImage=[[UIImageView alloc] initWithImage:[UIImage imageNamed:kCellAccessory]];
-        frame.origin.x=frame.size.width-kLEOCellAccessorySize-kDefaultListLeftX;
-        frame.origin.y=(frame.size.height-kLEOCellAccessorySize)/2.0;
-        frame.size.width=kLEOCellAccessorySize;
-        frame.size.height=kLEOCellAccessorySize;
-        _accessoryImage.frame=frame;
-        [self addSubview:_accessoryImage];
+//        _accessoryImage=[[UIImageView alloc] initWithImage:[UIImage imageNamed:kCellAccessory]];
+//        frame.origin.x=frame.size.width-kLEOCellAccessorySize-kDefaultListLeftX;
+//        frame.origin.y=(frame.size.height-kLEOCellAccessorySize)/2.0;
+//        frame.size.width=kLEOCellAccessorySize;
+//        frame.size.height=kLEOCellAccessorySize;
+//        _accessoryImage.frame=frame;
+//        [self addSubview:_accessoryImage];
         
         [self.contentView addSubview:_extendView];
         [self showExtend:NO];
@@ -98,17 +98,23 @@
 
 -(void)showAccessory:(BOOL)show
 {
-    _accessoryImage.hidden=!show;
-}
-
--(void)setAccessoryType:(UITableViewCellAccessoryType)accessoryType
-{
-    if (accessoryType==UITableViewCellAccessoryNone) {
-        self.accessoryView.hidden=YES;
-    } else {
-        self.accessoryView.hidden=NO;
+//    _accessoryImage.hidden=!show;
+    if (show) {
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    else {
+        self.accessoryType = UITableViewCellAccessoryNone;
     }
 }
+
+//-(void)setAccessoryType:(UITableViewCellAccessoryType)accessoryType
+//{
+//    if (accessoryType==UITableViewCellAccessoryNone) {
+//        self.accessoryView.hidden=YES;
+//    } else {
+//        self.accessoryView.hidden=NO;
+//    }
+//}
 
 -(void)setIconType:(NSString *)picName
 {

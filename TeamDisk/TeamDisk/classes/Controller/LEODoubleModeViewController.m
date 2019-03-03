@@ -415,7 +415,10 @@
         }
         LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
 //        [delegate.window setRootViewController:delegate.rootTabBarController];
-        [delegate clearCurrentServer];
+//        [delegate clearCurrentServer];
+        RDVTabBarController *tabbar = (RDVTabBarController *)delegate.window.rootViewController;
+        UINavigationController *tabNav = (UINavigationController *)tabbar.selectedViewController;
+        [tabNav popViewControllerAnimated:YES];
     }else {
         [self.navigationController popViewControllerAnimated:YES];
     }
@@ -429,9 +432,7 @@
         //编辑状态
         [self resetUI:YES];
         [editButtonView setTitle: NSLocalizedString(@"Done", @"") forState:UIControlStateNormal];
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)]){
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:YES];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:YES animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:NO];
         }
@@ -443,9 +444,7 @@
         }
     }else{
         [editButtonView setTitle: NSLocalizedString(@"Edit", @"") forState:UIControlStateNormal];
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:)]){
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:NO];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:NO animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:YES];
         }
@@ -483,17 +482,13 @@
 -(void)uploadToolBar:(BOOL)isChoose
 {
     LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
-    LEOTabBarViewController *root=(LEOTabBarViewController *)delegate.window.rootViewController;
+    RDVTabBarController *root=(RDVTabBarController *)delegate.window.rootViewController;
     if (isChoose) {
         // 显示上传目录选择视图
-        if([root respondsToSelector:@selector(hideTabBarFromBottom:)]){
-            [root hideTabBarFromBottom:YES];
-        }
+        [root setTabBarHidden:YES animated:YES];
     }else {
         // 隐藏目录选择视图
-        if([root respondsToSelector:@selector(hideTabBarFromBottom:)]){
-            [root hideTabBarFromBottom:NO];
-        }
+        [root setTabBarHidden:NO animated:YES];
     }
 }
 

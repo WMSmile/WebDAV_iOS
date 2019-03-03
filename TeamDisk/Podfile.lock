@@ -1,14 +1,17 @@
 PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (0.5)
+  - RDVTabBarController (1.2.0)
 
 DEPENDENCIES:
   - Masonry (from `https://github.com/SnapKit/Masonry.git`)
   - MBProgressHUD (= 0.5)
+  - RDVTabBarController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - MBProgressHUD
+    - RDVTabBarController
 
 EXTERNAL SOURCES:
   Masonry:
@@ -22,7 +25,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e34019ff264dbf1953f500570d97fca0b741b3c6
+  RDVTabBarController: b6d63a7fc49b00568ba07255c6171edc737ad833
 
-PODFILE CHECKSUM: a4eec5fe79b2bb2c672f4c5c7d3e9601d6cad727
+PODFILE CHECKSUM: 61441165de8aa8d78051b0689d635385766af338
 
 COCOAPODS: 1.5.3

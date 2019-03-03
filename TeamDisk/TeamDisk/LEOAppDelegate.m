@@ -17,10 +17,12 @@
 #import "LEODefines.h"
 #import "LEONetworkController.h"
 
+
+
 @implementation LEOAppDelegate
 
-@synthesize rootTabBarController=_rootTabBarController;
-@synthesize serverTabBarController=_serverTabBarController;
+//@synthesize rootTabBarController=_rootTabBarController;
+//@synthesize serverTabBarController=_serverTabBarController;
 @synthesize contentListVC=_contentListVC;
 @synthesize musicVC=_musicVC;
 @synthesize client;
@@ -32,20 +34,55 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
-//    CGRect frame=self.window.frame;
-//    NSLog(@"window:%f,%f,%f,%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
-
-//    self.window.backgroundColor = [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1];
+#if DEBUG
+    //    [CocoaDebug enable];
+    NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"];
+    [bundle load];
+#endif
     LEOServerListViewController *serverListVC=[[LEOServerListViewController alloc]init];
     UINavigationController *navServerListVC=[[UINavigationController alloc]initWithRootViewController:serverListVC];
+    
     _settingsVC=[[LEOSettingsViewController alloc]init];
     _navSettingsVC=[[UINavigationController alloc]initWithRootViewController:_settingsVC];
-    NSArray *rootTabBarVCArray=[NSArray arrayWithObjects:navServerListVC,_navSettingsVC,nil];
+    NSArray *rootTabBarVCArray = @[navServerListVC,_navSettingsVC];
     
-    NSArray *rootTabBarItemArray=[NSArray arrayWithObjects:kTabbarHome,kTabbarHomeSel,kTabbarSettings,kTabbarSettingsSel,nil];
-    _rootTabBarController=[[LEOTabBarViewController alloc] initWithViewControllers:rootTabBarVCArray andItems:rootTabBarItemArray];
-    self.window.rootViewController = self.rootTabBarController;
+//    NSArray *rootTabBarItemArray = [NSArray arrayWithObjects:kTabbarHome,kTabbarHomeSel,kTabbarSettings,kTabbarSettingsSel,nil];
+    
+    
+    
+    
+    
+    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
+    [tabBarController setViewControllers:rootTabBarVCArray];
+    self.window.rootViewController = tabBarController;
+
+    
+    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
+    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
+    NSArray *tabBarItemImages = @[kTabbarHome,kTabbarSettings];
+    
+    RDVTabBar *tabBar = [tabBarController tabBar];
+    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 63)];
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
+                                                      [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@",
+                                                        [tabBarItemImages objectAtIndex:index]]];
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        index++;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+//    _rootTabBarController=[[LEOTabBarViewController alloc] initWithViewControllers:rootTabBarVCArray andItems:rootTabBarItemArray];
+//    self.window.rootViewController = self.rootTabBarController;
     [self.window makeKeyAndVisible];
 //    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     return YES;
@@ -72,7 +109,10 @@
     }
     _currentServer=[[LEOServerInfo alloc] initWithInfo:info];
     [self setupServerControllers];
-    self.window.rootViewController=_serverTabBarController;
+    RDVTabBarController *tabbar = (RDVTabBarController *)self.window.rootViewController;
+    UINavigationController *nav = (UINavigationController *)tabbar.selectedViewController;
+    [nav pushViewController:_serverTabBarController animated:YES];
+//    self.window.rootViewController=_serverTabBarController;
 }
 
 -(void)clearCurrentServer
@@ -99,10 +139,35 @@
     UINavigationController *navUploadVC=[[UINavigationController alloc] initWithRootViewController:_uploadVC];
     _musicVC=[[LEOMusicViewController alloc] init];
     UINavigationController *navMusicVC=[[UINavigationController alloc] initWithRootViewController:_musicVC];
-    NSArray *serverTabBarVCArray=[NSArray arrayWithObjects:navContentListVC, navUploadVC, navMusicVC,_navSettingsVC, nil];
+    NSArray *serverTabBarVCArray=[NSArray arrayWithObjects:navContentListVC, navUploadVC, navMusicVC, nil];
     
-    NSArray *serverTabBarItemArray=[NSArray arrayWithObjects:kTabbarList,kTabbarListSel,kTabbarUpload,kTabbarUploadSel,kTabbarMusic,kTabbarMusicSel,kTabbarSettings,kTabbarSettingsSel,nil];
-    _serverTabBarController=[[LEOTabBarViewController alloc] initWithViewControllers:serverTabBarVCArray andItems:serverTabBarItemArray];
+//    NSArray *serverTabBarItemArray=[NSArray arrayWithObjects:kTabbarList,kTabbarListSel,kTabbarUpload,kTabbarUploadSel,kTabbarMusic,kTabbarMusicSel,kTabbarSettings,kTabbarSettingsSel,nil];
+//    _serverTabBarController=[[LEOTabBarViewController alloc] initWithViewControllers:serverTabBarVCArray andItems:serverTabBarItemArray];
+    
+    
+    
+    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
+    [tabBarController setViewControllers:serverTabBarVCArray];
+    _serverTabBarController = tabBarController;
+    
+    
+    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
+    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
+    NSArray *tabBarItemImages = @[kTabbarList,kTabbarUpload,kTabbarMusic];
+    
+    RDVTabBar *tabBar = [tabBarController tabBar];
+    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 63)];
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
+                                                      [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@",
+                                                        [tabBarItemImages objectAtIndex:index]]];
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        index++;
+    }
+    
 }
 
 - (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {

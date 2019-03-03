@@ -11,7 +11,7 @@
 #import "LEOWebDAVItem.h"
 #import "LEOAppDelegate.h"
 #import "LEOMusicViewController.h"
-#import "LEOTabBarViewController.h"
+#import <RDVTabBarController/RDVTabBarController.h>
 #import "AudioButton.h"
 
 @interface LEODetailMusicViewController ()
@@ -201,16 +201,12 @@
 {
     LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (isHide) {
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBarWithoutAnim:)]){
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBarWithoutAnim:YES];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:YES animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditToolBarWithoutAnim:)]){
             [_editToolBar hideEditToolBarWithoutAnim:NO];
         }
     }else {
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBarWithoutAnim:)]){
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBarWithoutAnim:NO];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:NO animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditToolBarWithoutAnim:)]){
             [_editToolBar hideEditToolBarWithoutAnim:YES];
         }

@@ -220,16 +220,12 @@
 {
     LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (isDetail) {
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:fromLeft:)]){
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:YES fromLeft:NO];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:YES animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:fromLeft:)]){
             [_editToolBar hideEditTooBar:NO fromLeft:NO];
         }
     }else {
-        if([delegate.window.rootViewController respondsToSelector:@selector(hideTabBar:fromLeft:)]){
-            [(LEOTabBarViewController *)delegate.window.rootViewController hideTabBar:NO fromLeft:NO];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:NO animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:fromLeft:)]){
             [_editToolBar hideEditTooBar:YES fromLeft:NO];
         }

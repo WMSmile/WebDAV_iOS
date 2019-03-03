@@ -5,7 +5,7 @@
 //  Created by Liu Ley on 12-10-23.
 //  Copyright (c) 2012年 SAE. All rights reserved.
 //
-
+/*
 #import <UIKit/UIKit.h>
 #import "LEOTabBar.h"
 
@@ -24,3 +24,4 @@
 -(void)hideTabBarFromBottom:(BOOL)hide;
 -(void)hideTabBarWithoutAnim:(BOOL)hide;
 @end
+*/

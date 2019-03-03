@@ -1,3 +1,19 @@
+# 基于WebDav的iOS客户端
+
+## Why？
+
+锤子便签非常好用，奈何同步功能经常出现错误（文件容易重复），好用的Bear熊掌记觉得不值得买，因为我只想做最简单的笔记，Bear只支持iCloud，无法同步到安卓设备
+
+## What ？
+
+主要用来写markdown笔记，并实现云同步，国内可使用坚果云，国外可使用Dropbox、GoogleDrive，所有文件保存在第三方服务器
+
+
+
+## 以下是旧版ReadMe
+
+
+
 # TeamDisk_iOS
 
 
@@ -6,6 +22,7 @@ TeamDisk iOS Client, is a WebDAV-based APP. Visit the [itunes link](https://itun
 ##FEATURES:
 
 ###[WebDAV Explorer]
+
 1. Manage WebDAV server account infomation.
 
 2. Navigate files.

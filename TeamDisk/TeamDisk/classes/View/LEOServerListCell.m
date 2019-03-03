@@ -47,13 +47,13 @@
         _urlLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [self.contentView addSubview:_urlLabel];
         
-        _accessoryImage=[[UIImageView alloc] initWithImage:[UIImage imageNamed:kCellAccessory]];
-        frame.origin.x=frame.size.width-kLEOCellAccessorySize-kDefaultListLeftX;
-        frame.origin.y=(frame.size.height-kLEOCellAccessorySize)/2.0;
-        frame.size.width=kLEOCellAccessorySize;
-        frame.size.height=kLEOCellAccessorySize;
-        _accessoryImage.frame=frame;
-        [self addSubview:_accessoryImage];
+//        _accessoryImage=[[UIImageView alloc] initWithImage:[UIImage imageNamed:kCellAccessory]];
+//        frame.origin.x=frame.size.width-kLEOCellAccessorySize-kDefaultListLeftX;
+//        frame.origin.y=(frame.size.height-kLEOCellAccessorySize)/2.0;
+//        frame.size.width=kLEOCellAccessorySize;
+//        frame.size.height=kLEOCellAccessorySize;
+//        _accessoryImage.frame=frame;
+//        [self addSubview:_accessoryImage];
         
         UIImageView *bg=[[UIImageView alloc] initWithFrame:self.frame];
         bg.backgroundColor=[UIColor colorWithRed:kHighlightColorR green:kHighlightColorG blue:kHighlightColorB alpha:kHighlightColorA];
@@ -65,7 +65,13 @@
 
 -(void)showAccessory:(BOOL)show
 {
-    _accessoryImage.hidden=!show;
+//    _accessoryImage.hidden=!show;//iOS6 Style
+    if (show) {
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    else {
+        self.accessoryType = UITableViewCellAccessoryNone;
+    }
 }
 
 -(void)dealloc {

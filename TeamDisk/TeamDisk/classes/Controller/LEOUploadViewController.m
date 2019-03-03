@@ -126,20 +126,16 @@
 -(void)editModeOfList {
     [_uploadListView setEditing:!_uploadListView.editing animated:YES];
     LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
-    LEOTabBarViewController *root=(LEOTabBarViewController *)delegate.window.rootViewController;
+    RDVTabBarController *root=(RDVTabBarController *)delegate.window.rootViewController;
     if(_uploadListView.editing){
         [editButtonView setTitle: NSLocalizedString(@"Done", @"") forState:UIControlStateNormal];
-        if([root respondsToSelector:@selector(hideTabBar:)]){
-            [root hideTabBar:YES];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:YES animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:NO];
         }
     }else{
         [editButtonView setTitle: NSLocalizedString(@"Edit", @"") forState:UIControlStateNormal];
-        if([root respondsToSelector:@selector(hideTabBar:)]){
-            [root hideTabBar:NO];
-        }
+        [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:NO animated:YES];
         if([_editToolBar respondsToSelector:@selector(hideEditTooBar:)]){
             [_editToolBar hideEditTooBar:YES];
         }
@@ -149,14 +145,15 @@
 -(void)uploadToolBar:(BOOL)isChoose
 {
     LEOAppDelegate *delegate=(LEOAppDelegate *)[[UIApplication sharedApplication] delegate];
-    LEOTabBarViewController *root=(LEOTabBarViewController *)delegate.window.rootViewController;
+    RDVTabBarController *root=(RDVTabBarController *)delegate.window.rootViewController;
     if (isChoose) {
         // 显示上传目录选择视图
 //        if ([root respondsToSelector:@selector(hideTabBarWithoutAnm:)]) {
 //            [root hideTabBarWithoutAnm:YES];
 //        }
         if([root respondsToSelector:@selector(hideTabBarFromBottom:)]){
-            [root hideTabBarFromBottom:YES];
+            [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:YES animated:YES];
+            
         }
     }else {
         // 隐藏目录选择视图
@@ -164,7 +161,7 @@
 //            [root hideTabBarWithoutAnm:NO];
 //        }
         if([root respondsToSelector:@selector(hideTabBarFromBottom:)]){
-            [root hideTabBarFromBottom:NO];
+            [(RDVTabBarController *)delegate.window.rootViewController setTabBarHidden:NO animated:YES];
         }
     }
 }
@@ -335,7 +332,7 @@
 - (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker
 {
     [self uploadToolBar:NO];
-        [self dismissViewControllerAnimated:YES completion:NULL];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - TableView DataSource

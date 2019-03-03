@@ -15,6 +15,9 @@
 		608B869F222BBC2800EE5BBA /* extentToMIME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 608B869C222BBC2700EE5BBA /* extentToMIME.plist */; };
 		608B86A0222BBC2800EE5BBA /* contentTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 608B869D222BBC2800EE5BBA /* contentTypes.plist */; };
 		608B86A1222BBC2800EE5BBA /* extendUTI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 608B869E222BBC2800EE5BBA /* extendUTI.plist */; };
+		608B86A4222BCF5A00EE5BBA /* XDNavgationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608B86A3222BCF5A00EE5BBA /* XDNavgationViewController.m */; };
+		608B86A8222BD44100EE5BBA /* UINavigationController+SXFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 608B86A6222BD44100EE5BBA /* UINavigationController+SXFullScreen.m */; };
+		608B86AB222BD45400EE5BBA /* NSObject+SXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 608B86AA222BD45400EE5BBA /* NSObject+SXRuntime.m */; };
 		632B89CCA81FEAB7F77E6726 /* libPods-TeamDisk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */; };
 		AF1254EF168062880014D1F9 /* LEOAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254EE168062880014D1F9 /* LEOAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF1254F316806D180014D1F9 /* LEOAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1254F216806D180014D1F9 /* LEOAssetTablePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -95,9 +98,6 @@
 		AFE8E7751682AEFE00FFC55E /* LEOChooseCopyPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8E7741682AEFE00FFC55E /* LEOChooseCopyPathViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFE9BC30166F2E630098A306 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC2F166F2E630098A306 /* icon.png */; };
 		AFE9BC32166F2E680098A306 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC31166F2E680098A306 /* icon@2x.png */; };
-		AFE9BC34166F2E720098A306 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC33166F2E720098A306 /* Default.png */; };
-		AFE9BC36166F2E830098A306 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC35166F2E830098A306 /* Default@2x.png */; };
-		AFE9BC38166F2EA20098A306 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE9BC37166F2EA20098A306 /* Default-568h@2x.png */; };
 		AFEAD4C3163643FB00DB48A1 /* LEOServerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4C2163643FB00DB48A1 /* LEOServerListViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFEAD4E916367AF800DB48A1 /* LEOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4E816367AF800DB48A1 /* LEOSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AFEAD4F0163681F800DB48A1 /* LEOTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEAD4EF163681F800DB48A1 /* LEOTabBarViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -118,6 +118,12 @@
 		608B869C222BBC2700EE5BBA /* extentToMIME.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = extentToMIME.plist; sourceTree = "<group>"; };
 		608B869D222BBC2800EE5BBA /* contentTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = contentTypes.plist; sourceTree = "<group>"; };
 		608B869E222BBC2800EE5BBA /* extendUTI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = extendUTI.plist; sourceTree = "<group>"; };
+		608B86A2222BCF5A00EE5BBA /* XDNavgationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDNavgationViewController.h; sourceTree = "<group>"; };
+		608B86A3222BCF5A00EE5BBA /* XDNavgationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDNavgationViewController.m; sourceTree = "<group>"; };
+		608B86A6222BD44100EE5BBA /* UINavigationController+SXFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SXFullScreen.m"; sourceTree = "<group>"; };
+		608B86A7222BD44100EE5BBA /* UINavigationController+SXFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SXFullScreen.h"; sourceTree = "<group>"; };
+		608B86A9222BD45400EE5BBA /* NSObject+SXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXRuntime.h"; sourceTree = "<group>"; };
+		608B86AA222BD45400EE5BBA /* NSObject+SXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXRuntime.m"; sourceTree = "<group>"; };
 		74F5E1381DF5CF0ECC767F2F /* libPods-TeamDisk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamDisk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAA57CC12EEB9FF3AD403E4 /* Pods-TeamDisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDisk/Pods-TeamDisk.release.xcconfig"; sourceTree = "<group>"; };
 		AF1254ED168062880014D1F9 /* LEOAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOAlbumPickerController.h; sourceTree = "<group>"; };
@@ -268,15 +274,12 @@
 		AFE8E7741682AEFE00FFC55E /* LEOChooseCopyPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOChooseCopyPathViewController.m; path = classes/Controller/LEOChooseCopyPathViewController.m; sourceTree = "<group>"; };
 		AFE9BC2F166F2E630098A306 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		AFE9BC31166F2E680098A306 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		AFE9BC33166F2E720098A306 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AFE9BC35166F2E830098A306 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AFE9BC37166F2EA20098A306 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFEAD4C1163643FB00DB48A1 /* LEOServerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEOServerListViewController.h; path = classes/Controller/LEOServerListViewController.h; sourceTree = "<group>"; };
 		AFEAD4C2163643FB00DB48A1 /* LEOServerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOServerListViewController.m; path = classes/Controller/LEOServerListViewController.m; sourceTree = "<group>"; };
 		AFEAD4E716367AF800DB48A1 /* LEOSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEOSettingsViewController.h; path = classes/Controller/LEOSettingsViewController.h; sourceTree = "<group>"; };
 		AFEAD4E816367AF800DB48A1 /* LEOSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOSettingsViewController.m; path = classes/Controller/LEOSettingsViewController.m; sourceTree = "<group>"; };
-		AFEAD4EE163681F800DB48A1 /* LEOTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEOTabBarViewController.h; path = classes/Controller/LEOTabBarViewController.h; sourceTree = "<group>"; };
-		AFEAD4EF163681F800DB48A1 /* LEOTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOTabBarViewController.m; path = classes/Controller/LEOTabBarViewController.m; sourceTree = "<group>"; };
+		AFEAD4EE163681F800DB48A1 /* LEOTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOTabBarViewController.h; sourceTree = "<group>"; };
+		AFEAD4EF163681F800DB48A1 /* LEOTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOTabBarViewController.m; sourceTree = "<group>"; };
 		AFEAD4F91636AA3200DB48A1 /* LEOTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEOTabBar.h; path = classes/View/LEOTabBar.h; sourceTree = "<group>"; };
 		AFEAD4FA1636AA3200DB48A1 /* LEOTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEOTabBar.m; path = classes/View/LEOTabBar.m; sourceTree = "<group>"; };
 		AFFA98A31675AE1200D9AC5B /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFHFKeychainUtils.h; path = classes/Utilities/SFHFKeychainUtils.h; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 			children = (
 				608B8698222BB9ED00EE5BBA /* XDRuntimeUtility.h */,
 				608B8699222BB9ED00EE5BBA /* XDRuntimeUtility.m */,
+				608B86A2222BCF5A00EE5BBA /* XDNavgationViewController.h */,
+				608B86A3222BCF5A00EE5BBA /* XDNavgationViewController.m */,
 				608B8691222BB98C00EE5BBA /* Category */,
 			);
 			path = V2.0;
@@ -328,6 +333,10 @@
 		608B8691222BB98C00EE5BBA /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				608B86A9222BD45400EE5BBA /* NSObject+SXRuntime.h */,
+				608B86AA222BD45400EE5BBA /* NSObject+SXRuntime.m */,
+				608B86A7222BD44100EE5BBA /* UINavigationController+SXFullScreen.h */,
+				608B86A6222BD44100EE5BBA /* UINavigationController+SXFullScreen.m */,
 				608B8693222BB9D200EE5BBA /* NSArray+Safe.h */,
 				608B8695222BB9D200EE5BBA /* NSArray+Safe.m */,
 				608B8694222BB9D200EE5BBA /* NSDictionary+Safe.h */,
@@ -339,11 +348,21 @@
 		608B869B222BBC1800EE5BBA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */,
 				608B869D222BBC2800EE5BBA /* contentTypes.plist */,
 				608B869E222BBC2800EE5BBA /* extendUTI.plist */,
 				608B869C222BBC2700EE5BBA /* extentToMIME.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		608B86A5222BD14600EE5BBA /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				AFEAD4EE163681F800DB48A1 /* LEOTabBarViewController.h */,
+				AFEAD4EF163681F800DB48A1 /* LEOTabBarViewController.m */,
+			);
+			path = Deprecated;
 			sourceTree = "<group>";
 		};
 		AF60A8DE172677A900A4DB96 /* LEOWebDAV */ = {
@@ -411,12 +430,8 @@
 		AFABE9F81635498700EDCCF3 = {
 			isa = PBXGroup;
 			children = (
-				AFE9BC37166F2EA20098A306 /* Default-568h@2x.png */,
-				AFE9BC35166F2E830098A306 /* Default@2x.png */,
-				AFE9BC33166F2E720098A306 /* Default.png */,
 				AFE9BC31166F2E680098A306 /* icon@2x.png */,
 				AFE9BC2F166F2E630098A306 /* icon.png */,
-				608B85F8222AE00F00EE5BBA /* Launch Screen.storyboard */,
 				AFABEA0D1635498700EDCCF3 /* TeamDisk */,
 				AFABEA061635498700EDCCF3 /* Frameworks */,
 				AFABEA041635498700EDCCF3 /* Products */,
@@ -452,6 +467,7 @@
 		AFABEA0D1635498700EDCCF3 /* TeamDisk */ = {
 			isa = PBXGroup;
 			children = (
+				608B86A5222BD14600EE5BBA /* Deprecated */,
 				AF60A8DE172677A900A4DB96 /* LEOWebDAV */,
 				AFE3450316537B9B0026B089 /* KTPhotoBrowser */,
 				AF856AC7164A600E00BFDDFF /* ELCImagePicker */,
@@ -488,8 +504,6 @@
 				AFEAD4C2163643FB00DB48A1 /* LEOServerListViewController.m */,
 				AFEAD4E716367AF800DB48A1 /* LEOSettingsViewController.h */,
 				AFEAD4E816367AF800DB48A1 /* LEOSettingsViewController.m */,
-				AFEAD4EE163681F800DB48A1 /* LEOTabBarViewController.h */,
-				AFEAD4EF163681F800DB48A1 /* LEOTabBarViewController.m */,
 				AF7244F4163947D20020086C /* LEOUploadViewController.h */,
 				AF7244F5163947D20020086C /* LEOUploadViewController.m */,
 				AF7244F716394CB30020086C /* LEOMusicViewController.h */,
@@ -681,11 +695,8 @@
 				AFE9BC30166F2E630098A306 /* icon.png in Resources */,
 				AFE9BC32166F2E680098A306 /* icon@2x.png in Resources */,
 				608B86A1222BBC2800EE5BBA /* extendUTI.plist in Resources */,
-				AFE9BC34166F2E720098A306 /* Default.png in Resources */,
 				608B86A0222BBC2800EE5BBA /* contentTypes.plist in Resources */,
 				608B868F222BB72C00EE5BBA /* Image.xcassets in Resources */,
-				AFE9BC36166F2E830098A306 /* Default@2x.png in Resources */,
-				AFE9BC38166F2EA20098A306 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +773,7 @@
 				AFE3451416537B9C0026B089 /* KTPhotoScrollViewController.m in Sources */,
 				AFE3451516537B9C0026B089 /* KTPhotoView.m in Sources */,
 				AFE3451B16537F1A0026B089 /* LEODoubleModeViewController.m in Sources */,
+				608B86A4222BCF5A00EE5BBA /* XDNavgationViewController.m in Sources */,
 				AFE3451E165382910026B089 /* LEOImageDataSource.m in Sources */,
 				AFE345241653A5890026B089 /* LEOImageThumbnailCell.m in Sources */,
 				AFD3FAB116549C7000A0BEDD /* LEOThumbnailItem.m in Sources */,
@@ -777,6 +789,7 @@
 				AF1254EF168062880014D1F9 /* LEOAlbumPickerController.m in Sources */,
 				AF1254F316806D180014D1F9 /* LEOAssetTablePicker.m in Sources */,
 				AFE8E7751682AEFE00FFC55E /* LEOChooseCopyPathViewController.m in Sources */,
+				608B86AB222BD45400EE5BBA /* NSObject+SXRuntime.m in Sources */,
 				AF60A8FC172677A900A4DB96 /* LEOWebDAVBaseRequest.m in Sources */,
 				AF60A8FD172677A900A4DB96 /* LEOWebDAVClient.m in Sources */,
 				AF60A8FE172677A900A4DB96 /* LEOWebDAVCopyRequest.m in Sources */,
@@ -787,6 +800,7 @@
 				AF60A903172677A900A4DB96 /* LEOWebDAVMoveRequest.m in Sources */,
 				AF60A904172677A900A4DB96 /* LEOWebDAVParser.m in Sources */,
 				AF60A905172677A900A4DB96 /* LEOWebDAVPropertyRequest.m in Sources */,
+				608B86A8222BD44100EE5BBA /* UINavigationController+SXFullScreen.m in Sources */,
 				AF60A906172677A900A4DB96 /* LEOWebDAVRequest.m in Sources */,
 				AF60A907172677A900A4DB96 /* LEOWebDAVUploadRequest.m in Sources */,
 				AF60A908172677A900A4DB96 /* LEOWebDAVURL.m in Sources */,

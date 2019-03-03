@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LEOTabBarViewController.h"
 @class LEOContentListViewController;
 @class LEOUploadViewController;
 @class LEOMusicViewController;
@@ -17,9 +16,14 @@
 @class LEOSettingsViewController;
 @class LEONetworkController;
 
+
+#import <RDVTabBarController/RDVTabBarController.h>
+#import <RDVTabBarController/RDVTabBarItem.h>
+
+
 @interface LEOAppDelegate : UIResponder <UIApplicationDelegate>{
-    LEOTabBarViewController *_rootTabBarController;
-    LEOTabBarViewController *_serverTabBarController;
+//    RDVTabBarController *_rootTabBarController;
+//    RDVTabBarController *_serverTabBarController;
 //    LEOContentListViewController *_contentListVC;
     LEODoubleModeViewController *_contentListVC;
     LEOUploadViewController *_uploadVC;
@@ -35,8 +39,8 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, readonly) LEOTabBarViewController *rootTabBarController;
-@property (nonatomic, readonly) LEOTabBarViewController *serverTabBarController;
+@property (nonatomic, readonly) RDVTabBarController *rootTabBarController;
+@property (nonatomic, readonly) RDVTabBarController *serverTabBarController;
 @property (nonatomic, readonly) LEOServerInfo *currentServer;
 //@property (nonatomic, readonly) LEOContentListViewController *contentListVC;
 @property (nonatomic, readonly) LEODoubleModeViewController *contentListVC;

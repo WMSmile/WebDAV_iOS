@@ -86,7 +86,7 @@
     frame.size.width-=kNewServerMargin*2;
     frame.origin.x=kNewServerMargin;
     frame.size.height=4*kNewServerCellHeight+5*kNewServerMargin;
-    frame.origin.y=100+kNewServerMargin;
+    frame.origin.y= kNewServerMargin;
     UIView *background=[[UIView alloc] initWithFrame:frame];
     CALayer *bgLayer=[background layer];
     [bgLayer setMasksToBounds:YES];
@@ -97,25 +97,25 @@
     [background release];
     
     // 左侧的Label https://dav.jianguoyun.com/dav/
-    _serverUrl = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*2, kNewServerLabelWidth, kNewServerCellHeight)];
+    _serverUrl = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin,  kNewServerMargin*2, kNewServerLabelWidth, kNewServerCellHeight)];
     _serverUrl.backgroundColor=[UIColor clearColor];
     _serverUrl.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _serverUrl.textAlignment=NSTextAlignmentRight;
     _serverUrl.text=NSLocalizedString(@"Server URL",@"");
     [self.view addSubview:_serverUrl];
-    _userName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*3+kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
+    _userName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin,  kNewServerMargin*3+kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _userName.backgroundColor=[UIColor clearColor];
     _userName.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _userName.textAlignment=NSTextAlignmentRight;
     _userName.text=NSLocalizedString(@"User Name",@"");
     [self.view addSubview:_userName];
-    _password = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*4+2*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
+    _password = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin,  kNewServerMargin*4+2*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _password.backgroundColor=[UIColor clearColor];
     _password.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _password.textAlignment=NSTextAlignmentRight;
     _password.text=NSLocalizedString(@"Password",@"");
     [self.view addSubview:_password];
-    _desName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin, 100+kNewServerMargin*5+3*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
+    _desName = [[UILabel alloc] initWithFrame:CGRectMake(kNewServerMargin,  kNewServerMargin*5+3*kNewServerCellHeight, kNewServerLabelWidth, kNewServerCellHeight)];
     _desName.backgroundColor=[UIColor clearColor];
     _desName.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _desName.textAlignment=NSTextAlignmentRight;
@@ -125,7 +125,7 @@
     // 右侧的TextField
     CGSize size=self.view.frame.size;
     CGFloat textWidth=size.width-kNewServerLabelWidth-5*kNewServerMargin;
-    _serverUrlText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*2, textWidth, kNewServerCellHeight)];
+    _serverUrlText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth,  kNewServerMargin*2, textWidth, kNewServerCellHeight)];
     _serverUrlText.borderStyle=UITextBorderStyleRoundedRect;
     _serverUrlText.textAlignment=NSTextAlignmentLeft;
     _serverUrlText.text = @"http://dav.jianguoyun.com/dav";
@@ -140,12 +140,13 @@
     _serverUrlText.delegate=self;
     [self.view addSubview:_serverUrlText];
     
-    _userNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*3+kNewServerCellHeight, textWidth, kNewServerCellHeight)];
+    _userNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth,  kNewServerMargin*3+kNewServerCellHeight, textWidth, kNewServerCellHeight)];
     _userNameText.borderStyle=UITextBorderStyleRoundedRect;
     _userNameText.textAlignment=NSTextAlignmentLeft;
     _userNameText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     _userNameText.font=[UIFont systemFontOfSize:kNewServerFontSz];
     _userNameText.keyboardType=UIKeyboardTypeDefault;
+    _userNameText.text = @"7749@qq.com";
     _userNameText.autocapitalizationType=UITextAutocapitalizationTypeNone;
     _userNameText.placeholder=NSLocalizedString(@"(Required)Please Input User Name",@"");
     _userNameText.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -154,7 +155,7 @@
     _userNameText.delegate=self;
     [self.view addSubview:_userNameText];
     
-    _passwordText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*4+kNewServerCellHeight*2, textWidth, kNewServerCellHeight)];
+    _passwordText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth,  kNewServerMargin*4+kNewServerCellHeight*2, textWidth, kNewServerCellHeight)];
     _passwordText.borderStyle=UITextBorderStyleRoundedRect;
     _passwordText.textAlignment=NSTextAlignmentLeft;
     _passwordText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
@@ -168,7 +169,8 @@
     _passwordText.tag=kTagPassword;
     _passwordText.delegate=self;
     [self.view addSubview:_passwordText];
-    _desNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth, 100+kNewServerMargin*5+kNewServerCellHeight*3, textWidth, kNewServerCellHeight)];
+    _passwordText.text = @"";
+    _desNameText = [[UITextField alloc] initWithFrame:CGRectMake(kNewServerMargin*2+kNewServerLabelWidth,  kNewServerMargin*5+kNewServerCellHeight*3, textWidth, kNewServerCellHeight)];
     _desNameText.borderStyle=UITextBorderStyleRoundedRect;
     _desNameText.textAlignment=NSTextAlignmentLeft;
     _desNameText.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;

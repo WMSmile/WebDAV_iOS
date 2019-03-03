@@ -10,4 +10,5 @@ target 'TeamDisk' do
   # Pods for TeamDisk
     pod 'Masonry', :git => 'https://github.com/SnapKit/Masonry.git'
     pod 'MBProgressHUD','0.5'
+    pod 'RDVTabBarController'
 end
